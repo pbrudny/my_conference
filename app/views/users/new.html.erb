@@ -1,5 +1,5 @@
-<h1>New User</h1>
+<h1><%= t('user.header.add')%></h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path %>
+<%= link_to t('user.back'), static_pages_main_path %>

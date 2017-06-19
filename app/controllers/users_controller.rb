@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  http_basic_authenticate_with name: 'dhh', password: 'secret', except: %w(new create)
+  http_basic_authenticate_with name: 'tlr', password: 'mat16', except: %w(new create show)
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: I18n.t('user.created') }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
