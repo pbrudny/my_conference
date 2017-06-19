@@ -26,3 +26,14 @@ pl:
     header:
       add: "Zgłoś uczestnika"
     back: "Powrót"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            first_name:
+              blank: 'Podaj imię!'
+            last_name:
+              blank: 'Podaj nazwisko!'
+            email:
+              blank: 'Podaj E-mail!'

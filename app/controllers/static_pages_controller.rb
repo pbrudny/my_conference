@@ -2,6 +2,6 @@ class StaticPagesController < ApplicationController
   def main
   end
 
-  def about
+  def schedule
   end
 end

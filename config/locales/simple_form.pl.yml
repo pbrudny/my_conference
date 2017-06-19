@@ -20,10 +20,17 @@ pl:
           email: 'E-mail'
           phone: 'Telefon'
           fellowship: 'Wspólnota'
-          first_time: 'Pierwszy raz'
+          first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
+          commit: 'Zapisz'
           submit: 'Zapisz'
         edit:
-          email: 'E-mail.'
+          first_name: 'Imię'
+          last_name: 'Nazwisko'
+          email: 'E-mail'
+          phone: 'Telefon'
+          fellowship: 'Wspólnota'
+          first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
+          commit: 'Zapisz'
       hints:
         defaults:
           username: 'User name to sign in.'
