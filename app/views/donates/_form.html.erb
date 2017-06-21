@@ -2,14 +2,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :amount %>
-    <%= f.input :email %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :received %>
+    <%= f.input :email %>
+    <%= f.input :amount %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.submit t('simple_form.labels.donate.new.submit'), class: 'btn btn-primary btn-lg' %>
   </div>
 <% end %>

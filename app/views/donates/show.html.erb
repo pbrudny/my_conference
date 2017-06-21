@@ -1,33 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class = 'jumbotron'>
+<h3>
+  Prosimy o wpłatę na poniższe konto:
+</h3>
 
 <p>
-  <strong>Amount:</strong>
+Numer konta
+</p>
+<p>
+  <strong><%= t('donate.amount') %>:</strong>
   <%= @donate.amount %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @donate.email %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @donate.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @donate.last_name %>
-</p>
-
-<p>
-  <strong>Received:</strong>
-  <%= @donate.received %>
+    <strong>W tytule:</strong> Darowizna
 </p>
 
 <%= link_to 'Edit', edit_donate_path(@donate) %> |
-<%= link_to 'Back', donates_path %>
+<%= link_to t('donate.back'), donates_path %>
 
-Prosimy o wpłatę na poniższe konto:
-
-W tytule: Darowizna
+</div>

@@ -21,7 +21,6 @@ pl:
           phone: 'Telefon'
           fellowship: 'Wspólnota'
           first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
-          commit: 'Zapisz'
           submit: 'Zapisz'
         edit:
           first_name: 'Imię'
@@ -30,7 +29,22 @@ pl:
           phone: 'Telefon'
           fellowship: 'Wspólnota'
           first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
-          commit: 'Zapisz'
+          submit: 'Zapisz'
+      donate:
+        new:
+          first_name: 'Imię'
+          last_name: 'Nazwisko'
+          email: 'E-mail'
+          amount: 'Kwota'
+          received: 'Otrzymane'
+          submit: 'Zapisz'
+        edit:
+          first_name: 'Imię'
+          last_name: 'Nazwisko'
+          email: 'E-mail'
+          amount: 'Kwota'
+          received: 'Otrzymane'
+          submit: 'Zapisz'
       hints:
         defaults:
           username: 'User name to sign in.'

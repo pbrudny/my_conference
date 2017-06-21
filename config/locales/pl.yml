@@ -40,3 +40,16 @@ pl:
               blank: 'Podaj nazwisko!'
             email:
               blank: 'Podaj E-mail!'
+        donate:
+          attributes:
+            amount:
+              blank: 'Podaj kwotę'
+              greater_than: 'Kwota musi być większa niż zero'
+            email:
+              blank: 'Podaj E-mail!'
+  last_name: "nazwisko"
+  first_name: "Imię"
+  donate:
+    back: "powrót"
+    amount: "Kwota"
+  email: "E-mail"
