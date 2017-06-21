@@ -4,12 +4,13 @@
   <title>Kickstart Polska</title>
   <%= csrf_meta_tags %>
 
+  <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-<%= render 'layouts/header' %>
+<!--<%= render 'layouts/header' %>-->
 <div class="container">
   <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-info") %>

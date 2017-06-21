@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @donate.amount %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @donate.email %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @donate.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @donate.last_name %>
+</p>
+
+<p>
+  <strong>Received:</strong>
+  <%= @donate.received %>
+</p>
+
+<%= link_to 'Edit', edit_donate_path(@donate) %> |
+<%= link_to 'Back', donates_path %>
+
+Prosimy o wpłatę na poniższe konto:
+
+W tytule: Darowizna

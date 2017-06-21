@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  http_basic_authenticate_with name: 'tlr', password: 'mat16', except: %w(new create show)
+  http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(new create show)
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users

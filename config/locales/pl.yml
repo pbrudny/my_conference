@@ -26,6 +26,9 @@ pl:
     header:
       add: "Zgłoś uczestnika"
     back: "Powrót"
+    mailer:
+      created:
+        title: "Zgłoszenie przyjęte"
   activerecord:
     errors:
       models:

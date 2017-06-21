@@ -1,9 +1,54 @@
-<h1>Konferencja Kickstart Polska</h1>
+
+<h1>Konferencja Kickstart Polska, Warszawa 19-20 Sierpnia</h1>
+<hr />
 <p>
-  <%= image_tag 'https://modres.files.wordpress.com/2016/05/torbensondergaard.jpg', width: 320, height: 200 %>
+  <h3>Chcemy by wstęp na konferencje był <strong>darmowy</strong></h3>
 </p>
+<p>
+  Musimy jednak opłacić:
+</p>
+<ul>
+  <li>
+    wynajęcie sali konferencyjnej na 700 osób
+  </li>
+  <li>
+  wynajęcie sprzętu multimedialnego i nagłośnieniowego potrzebnego do realizacji wykładów
+  </li>
+  <li>
+  opłacenie noclegów dla Torbena
+  </li>
+  <li>
+  noclegi dla 40 - osobowego międzynarodowego teamu towarzyszącego Torbenowi w przyległym do sali konferencyjnej hotelu
+  </li>
+  </ul>
+<p>
+  Dlatego chcemy wspólnie zebrać środki na organizację tego wydarzenia tak by każdy miał okazję uczestniczyć
+  </p>
+<hr />
+  <strong>Jeśli uzbierana kwota przewyższy koszta pozostałe fundusze przekażemy na:</strong>
+<ul>
+  <li>
+    tłumaczenie II części filmu The Last Reformation, którego premiera odbędzie się już w pażdzierniku
+  </li>
+  <li>
+    pokrycie kosztu biletów samolotowych dla Torbena oraz wsparcie jego działalności (sam Torben nie pobiera honorarium za prowadzenie konferencji ale chcielibyśmy by nie musiał przylatywać do nas na własny koszt - okażmy polską gościnnośc!)
+  </li>
+</ul>
+</p>
+<hr />
+<p>Potrzebujemy: <strong>30 000 zł</strong></p>
+<p>
+  <%= progress_bar Donate.percentage, striped: true , label: true, style: 'min-width: 20px'%>
+
+  Zebraliśmy: <strong><%= Donate.all.sum(:amount) %> zł</strong>
+
+</p>
+
+<hr />
+<div class="jumbotron">
 <p>Mówca: <strong><%= link_to 'Torben Søndergaard (Dania)', 'https://thelastreformation.com/about-torben-sondergaard', target: '_blank'%></strong></p>
 
 <p>Czas: <strong>19-20 Sierpnia</strong></p>
 <p>Miejsce: <strong>Warszawa, Bobrowiecka 9</strong></p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.627824940411!2d21.042692911391523!3d52.20093373204627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecd3a2af22d55%3A0x16a023d124f7e628!2sBobrowiecka+9%2C+00-728+Warszawa!5e0!3m2!1sen!2spl!4v1497887817090" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
