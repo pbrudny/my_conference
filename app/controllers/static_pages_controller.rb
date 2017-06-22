@@ -5,4 +5,12 @@ class StaticPagesController < ApplicationController
 
   def schedule
   end
+
+  def details
+
+  end
+
+  def contact
+
+  end
 end

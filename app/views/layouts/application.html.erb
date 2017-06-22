@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Kickstart Polska</title>
+  <html>
+  <head>
+    <title>Kickstart Polska</title>
   <%= csrf_meta_tags %>
-
-  <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
-<!--<%= render 'layouts/header' %>-->
+<header class="row">
+  <a href="/">
+
+  <div class="col-3">
+    <div class="circle">
+      <br />
+      Kickstart
+      <br />
+      Polska
+      <br />
+      2017
+    </div>
+  </div>
+  </a>
+  <div class="col-5 links">
+    <%= link_to 'Szczegóły', static_pages_details_path %>
+    <%= link_to 'Kontakt', static_pages_contact_path %>
+  </div>
+</header>
+<hr />
+<br class="clear" />
+
 <div class="container">
-  <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-  <% end %>
   <%= yield %>
 </div>
+
 </body>
 </html>
