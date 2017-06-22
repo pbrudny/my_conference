@@ -8,7 +8,7 @@ class DonateMailer < ApplicationMailer
   def donation_declared(donate)
     @greeting = "Cześć #{donate.first_name}"
     @above if donate.above_limit?
-
-    mail to: donate.email
+    @amount = donate.amount
+    mail to: donate.email, subject: 'Wpłata na kickstart'
   end
 end
