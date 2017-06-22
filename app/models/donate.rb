@@ -18,4 +18,8 @@ class Donate < ApplicationRecord
   def above_limit?
     amount > ENV['donate_limit'].to_i
   end
+
+  def self.account_number
+    ENV['account_number']
+  end
 end

@@ -9,6 +9,7 @@ class DonateMailer < ApplicationMailer
     @greeting = "Cześć #{donate.first_name}"
     @above if donate.above_limit?
     @amount = donate.amount
+    @account = Donate.account_number
     mail to: donate.email, subject: 'Wpłata na kickstart'
   end
 end
