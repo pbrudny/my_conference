@@ -1,5 +1,5 @@
 class DonatesController < ApplicationController
-  http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(create show)
+  http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(new create show)
   before_action :set_donate, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -39,9 +39,7 @@ class DonatesController < ApplicationController
 
   def destroy
     @donate.destroy
-    respond_to do |format|
-      format.html { redirect_to donates_url, notice: 'Donate was successfully destroyed.' }
-    end
+      redirect_to donates_url, notice: 'Donate was successfully destroyed.'
   end
 
   private
