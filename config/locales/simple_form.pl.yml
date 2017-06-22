@@ -13,6 +13,12 @@ pl:
     labels:
       defaults:
         password: 'Hasło'
+        first_name: 'Imię'
+        last_name: 'Nazwisko'
+        email: 'E-mail'
+        amount: 'Kwota'
+        received: 'Otrzymane'
+        submit: 'Zapisz'
       user:
         new:
           first_name: 'Imię'

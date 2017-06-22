@@ -3,7 +3,12 @@ class Donate < ApplicationRecord
   validates :email, presence: true
 
   def self.percentage
-    Float(Donate.all.sum(:amount)) / self.total_cost
+    return 1 if self.total > self.total_cost
+    Float(self.total) / self.total_cost
+  end
+
+  def self.total
+    Donate.all.sum(:amount)
   end
 
   def self.total_cost

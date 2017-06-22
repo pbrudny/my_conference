@@ -49,7 +49,12 @@ pl:
               blank: 'Podaj E-mail!'
   last_name: "nazwisko"
   first_name: "Imię"
-  donate:
-    back: "powrót"
-    amount: "Kwota"
   email: "E-mail"
+  show: "Pokaż"
+  edit: "Edytuj"
+  are_you_sure: "Czy na pewno chcesz usunąć?"
+  destroy: "Usuń"
+  amount: "Kwota"
+  back: "Powrót"
+  received: "Otrzymane"
+  donate: "Wesprzyj"

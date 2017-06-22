@@ -7,15 +7,14 @@
 Numer konta
 </p>
 <p>
-  <strong><%= t('donate.amount') %>:</strong>
-  <%= @donate.amount %>
+  <strong><%= t('amount') %>:</strong>
+  <%= @donate.amount %> zł
 </p>
 
 <p>
     <strong>W tytule:</strong> Darowizna
 </p>
 
-<%= link_to 'Edit', edit_donate_path(@donate) %> |
-<%= link_to t('donate.back'), donates_path %>
+<%= link_to t('back'), static_pages_main_path %>
 
 </div>
