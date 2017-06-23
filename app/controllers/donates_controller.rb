@@ -28,18 +28,16 @@ class DonatesController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @donate.update(donate_params)
-        format.html { redirect_to @donate, notice: 'Donate was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @donate.update(donate_params)
+      redirect_to donates_path, notice: 'Zaktualizowano wpis'
+    else
+      render :edit
     end
   end
 
   def destroy
     @donate.destroy
-      redirect_to donates_url, notice: 'Donate was successfully destroyed.'
+      redirect_to donates_url, notice: 'Deklaracja usunięta'
   end
 
   private
