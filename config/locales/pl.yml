@@ -58,3 +58,4 @@ pl:
   back: "Powrót"
   received: "Otrzymane"
   donate: "Wesprzyj"
+  wrong_email: "Błędny E-mail"
