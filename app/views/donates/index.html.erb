@@ -7,6 +7,7 @@
       <th><%= t('email') %></th>
       <th><%= t('first_name') %></th>
       <th><%= t('last_name') %></th>
+      <th><%= t('registered_numbers') %></th>
       <th><%= t('received') %></th>
       <th colspan="3"></th>
     </tr>
@@ -19,6 +20,7 @@
         <td><%= donate.email %></td>
         <td><%= donate.first_name %></td>
         <td><%= donate.last_name %></td>
+        <td><%= donate.users.try(:count) %></td>
         <td><%= donate.received %></td>
         <td><%= link_to t('show'), donate %></td>
         <td><%= link_to t('edit'), edit_donate_path(donate) %></td>

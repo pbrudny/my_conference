@@ -2,6 +2,10 @@ class Donate < ApplicationRecord
   validates :amount, presence: true, numericality: { greater_than: 0 }
   validates_email_format_of :email, message: I18n.t('wrong_email')
   validates :email, presence: true
+
+  has_many :users
+
+  has_secure_token
   
   def self.percentage
     return 1 if self.total > self.total_cost

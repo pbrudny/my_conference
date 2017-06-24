@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.created.subject
   #
-  def created(user)
+  def user_registered(user)
     @greeting = "Hej"
 
     mail to: user.email

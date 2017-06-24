@@ -6,4 +6,8 @@ class DonateMailerPreview < ActionMailer::Preview
     DonateMailer.donation_declared(Donate.first)
   end
 
+  def donation_received
+    DonateMailer.donation_received(Donate.first)
+  end
+
 end

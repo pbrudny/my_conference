@@ -12,4 +12,10 @@ class DonateMailer < ApplicationMailer
     @account = Donate.account_number
     mail to: donate.email, subject: 'Wpłata na kickstart'
   end
+
+  def donation_received(donate)
+    @name = donate.first_name
+    @token = donate.token
+    mail to: donate.email, subject: 'Otrzymaliśmy wpłatę'
+  end
 end

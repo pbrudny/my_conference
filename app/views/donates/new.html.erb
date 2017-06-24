@@ -1,5 +1,18 @@
 <h1>Deklaracja wpłaty</h1>
 
-<%= render 'form', donate: @donate %>
+<%= simple_form_for(@donate) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :amount, label: 'Kwota (zł)' %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit t('simple_form.labels.donate.new.submit'), class: 'btn btn-primary btn-lg' %>
+    </div>
+<% end %>
 <hr>
 <%= link_to t('back'), static_pages_main_path %>
