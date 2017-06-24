@@ -6,8 +6,7 @@ module Users
     end
 
     def call
-      binding.pry
-      if user.save!
+      if user.save
         UserMailer.user_registered(user).deliver_now
       end
     end
