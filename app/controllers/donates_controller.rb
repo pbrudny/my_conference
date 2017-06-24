@@ -1,6 +1,6 @@
 class DonatesController < ApplicationController
   http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(new create show)
-  before_action :set_donate, only: [:show, :edit, :update, :destroy]
+  before_action :set_donate, only: [:show, :edit, :update, :destroy, :set_received]
 
   def index
     @donates = Donate.all
@@ -37,7 +37,12 @@ class DonatesController < ApplicationController
 
   def destroy
     @donate.destroy
-      redirect_to donates_url, notice: 'Deklaracja usunięta'
+    redirect_to donates_url, notice: 'Deklaracja usunięta'
+  end
+
+  def set_received
+    Donates::SetReceived.new(@donate).call
+    redirect_to donates_url, notice: 'Wysłano E-mail z linkiem rejestracyjnym'
   end
 
   private
