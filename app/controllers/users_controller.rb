@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 
   def new
     @token = params[:token]
-    @user = User.new
+    email = Donate.find_by(token: @token).try(:email)
+    @user = User.new(email: email)
   end
 
   def edit
