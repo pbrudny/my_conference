@@ -8,6 +8,6 @@ class UserMailer < ApplicationMailer
   def user_registered(user)
     @greeting = "Hej #{user.first_name}"
 
-    mail to: user.email, subject: 'Zarejestrowano na Kickstart Polska'
+    mail to: user.email, subject: 'Potwierdzenie rejestracji'
   end
 end
