@@ -3,7 +3,7 @@ class DonatesController < ApplicationController
   before_action :set_donate, only: [:show, :edit, :update, :destroy, :set_received]
 
   def index
-    @donates = Donate.all
+    @donates = Donate.order(:created_at)
   end
 
   def show

@@ -9,7 +9,7 @@
       <th><%= t('last_name') %></th>
       <th><%= t('registered_numbers') %></th>
       <th><%= t('received') %></th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -21,8 +21,8 @@
         <td><%= donate.first_name %></td>
         <td><%= donate.last_name %></td>
         <td><%= donate.users.try(:count) %></td>
-        <td><%= donate.received %></td>
-        <td><%= link_to t('show'), donate %></td>
+        <td><%= (donate.received ? fa_icon("check") : '?') %></td>
+        <td><%= link_to t('set_received'), set_received_donate_path(donate) %></td>
         <td><%= link_to t('edit'), edit_donate_path(donate) %></td>
         <td><%= link_to t('destroy'), donate, method: :delete, data: { confirm: t('are_you_sure') } %></td>
       </tr>
