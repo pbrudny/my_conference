@@ -3,7 +3,8 @@ class DonatesController < ApplicationController
   before_action :set_donate, only: [:show, :edit, :update, :destroy, :set_received]
 
   def index
-    @donates = Donate.order(:created_at).page params[:page]
+    @q = Donate.ransack(params[:q])
+    @donates = @q.result(distinct: true).page params[:page]
   end
 
   def show
