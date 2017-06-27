@@ -21,7 +21,7 @@
         <td><%= donate.first_name %></td>
         <td><%= donate.last_name %></td>
         <td><%= donate.users.try(:count) %></td>
-        <td><%= (donate.received ? fa_icon("check") : '?') %></td>
+        <td><%= checked(donate.received) %></td>
         <td><%= link_to t('set_received'), set_received_donate_path(donate) %></td>
         <td><%= link_to t('edit'), edit_donate_path(donate) %></td>
         <td><%= link_to t('destroy'), donate, method: :delete, data: { confirm: t('are_you_sure') } %></td>
@@ -30,4 +30,7 @@
   </tbody>
 </table>
 
+<%= paginate @donates %>
+
 <%= link_to t('back'), static_pages_main_path %>
+

@@ -29,6 +29,8 @@ pl:
     mailer:
       created:
         title: "Zgłoszenie przyjęte"
+    updated: "Zaktualizowano dane użytkownika"
+    destroyed: "Usunięto użytkownika"
   activerecord:
     errors:
       models:
@@ -67,3 +69,9 @@ pl:
   registered: "Zarejestrowani"
   add_user: "Dodaj użytkownika"
   set_received: "Potwierdź otrzymanie"
+  views:
+    pagination:
+      first: "Pierwsza"
+      last: "Ostatnia"
+      next: "Następna"
+      previous: "Poprzednia"
