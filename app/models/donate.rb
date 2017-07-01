@@ -24,7 +24,23 @@ class Donate < ApplicationRecord
     amount > ENV['donate_limit'].to_i
   end
 
+  def self.iban_number
+    ENV['iban_number']
+  end
+
+  def self.swift_number
+    ENV['swift_number']
+  end
+
   def self.account_number
     ENV['account_number']
+  end
+
+  def self.bank_name
+    ENV['bank_name']
+  end
+
+  def self.bank_address
+    ENV['bank_address']
   end
 end

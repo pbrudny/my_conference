@@ -9,10 +9,25 @@
   Katarzyna Wasiak
 </p>
 <p>
- Numer konta: <strong><%= Donate.account_number %></strong>
+  Numer konta: <strong><%= Donate.account_number %></strong>
 </p>
 <p>
-   Tytułem: <strong>Darowizna</strong>
+  Tytułem: <strong>Darowizna</strong>
+</p>
+
+<hr />
+<h4>Dane do przelewów zagranicznych</h4>
+<p>
+ IBAN: <strong><%= Donate.iban_number %></strong>
+</p>
+<p>
+ SWIFT: <strong><%= Donate.swift_number %></strong>
+</p>
+<p>
+ <strong><%= Donate.bank_name %></strong>
+</p>
+<p>
+ <strong><%= Donate.bank_address %></strong>
 </p>
 
 <%= link_to t('back'), static_pages_main_path %>
