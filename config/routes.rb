@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/schedule'
   get 'static_pages/details'
   get 'static_pages/contact'
+  get 'static_pages/faq'
 
   resources :users
   root 'static_pages#main'

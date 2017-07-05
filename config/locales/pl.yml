@@ -76,3 +76,5 @@ pl:
       next: "Następna"
       previous: "Poprzednia"
   city: "Miasto"
+  hours: "Godziny"
+  additional_notes: "Uwagi"
