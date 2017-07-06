@@ -2,8 +2,7 @@
 class UserMailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/user_mailer/created
-  def created
-    UserMailer.created(User.first)
+  def user_registered
+    UserMailer.user_registered(User.first)
   end
-
 end

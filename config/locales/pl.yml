@@ -29,6 +29,7 @@ pl:
     mailer:
       created:
         title: "Zgłoszenie przyjęte"
+      registration_reminder: "Przypominamy o możliwości rejestracji"
     updated: "Zaktualizowano dane użytkownika"
     destroyed: "Usunięto użytkownika"
   activerecord:
@@ -59,9 +60,9 @@ pl:
   amount: "Kwota"
   back: "Powrót"
   received: "Otrzymane"
-  donate: "Wesprzyj"
+  date: "Data"
   wrong_email: "Błędny E-mail"
-  registered_numbers: "Liczba zarejestrowanych"
+  registered_numbers: "Osoby"
   phone: "Telefon"
   fellowship: "Wspólnota"
   first_time: "Pierwszy raz"

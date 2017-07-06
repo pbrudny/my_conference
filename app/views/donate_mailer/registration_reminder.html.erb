@@ -1,0 +1,34 @@
+<h1><%= t('user.mailer.registration_reminder') %></h1>
+
+<p>
+  <%= @greeting %>
+</p>
+<p>
+Niedługo otworzymy rejestrację dla wszystkich.
+</p>
+<p>
+  700 miejsc to dużo ale przy tak ogromnym zainteresowaniu może nie starczyć miejsc dla każdego.
+</p>
+<p>
+  Dlatego jeśli chcesz uczestniczyć w konferencji lub zaprosić rodzinę, przyjaciół
+</p>
+<p>
+  to nie zapomnij jak najszybciej wysłać zgłoszenie przez formularz zgłoszeniowy.
+</p>
+<p>
+<%= link_to 'formularz zgłoszeniowy', new_user_url(token: @token) %>
+</p>
+<p>
+  Wstęp na konferencję jest darmowy ale zgłoszenie jest konieczne
+</p>
+<p>
+
+</p>
+<br />
+<p>Pozdrawiamy,</p>
+</p>
+<p>
+  Organizatorzy kickstartu (Kasia, Kuba, Piotrek i Aga)
+</p>
+
+<p><%= link_to 'http://kickstartpolska.pl', root_url %></p>
