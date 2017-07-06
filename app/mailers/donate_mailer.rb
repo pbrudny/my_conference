@@ -22,6 +22,6 @@ class DonateMailer < ApplicationMailer
   def registration_reminder(donate)
     @greeting = "Hej #{donate.first_name}"
     @token = donate.token
-    mail to: donate.email, subject: 'Przypomnienie o rejestracji'
+    mail to: donate.email, subject: 'Przypomnienie o rejestracji na Kickstart'
   end
 end
