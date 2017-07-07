@@ -60,6 +60,7 @@ pl:
   amount: "Kwota"
   back: "Powrót"
   received: "Otrzymane"
+  donate: "Wesprzyj"
   date: "Data"
   wrong_email: "Błędny E-mail"
   registered_numbers: "Osoby"
