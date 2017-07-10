@@ -34,12 +34,7 @@
     </div>
   </div>
   </a>
-  <div class="col-5 links">
-    <%= link_to 'Wsparcie', root_path %>|
-    <%= link_to 'Szczegóły', static_pages_details_path %>|
-    <%= link_to 'Program', static_pages_schedule_path %>|
-    <%= link_to 'Kontakt', static_pages_contact_path %>
-  </div>
+  <%= render partial: 'layouts/navbar' %>
 </header>
 <hr />
 <br class="clear" />

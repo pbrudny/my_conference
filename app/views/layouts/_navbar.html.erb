@@ -1,0 +1,8 @@
+<div class="col-5 links">
+  <%= link_to 'Program', static_pages_schedule_path %>|
+  <% if User.seats_available? %>
+    <%= link_to 'Rejestracja', new_user_path %>|
+  <% end %>
+  <%= link_to 'Wsparcie', static_pages_support_path %>|
+  <%= link_to 'Kontakt', static_pages_contact_path %>
+</div>

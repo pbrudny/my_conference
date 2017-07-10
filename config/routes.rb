@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   get 'static_pages/main'
   get 'static_pages/schedule'
-  get 'static_pages/details'
+  get 'static_pages/support'
   get 'static_pages/contact'
   get 'static_pages/faq'
 

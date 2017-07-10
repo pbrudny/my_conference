@@ -1,4 +1,4 @@
-<h1><%= t('user.header.add')%></h1>
+<h1><%= t('user.header.add') %> (zostało <%= User.total_available %> miejsc)</h1>
 
 <%= simple_form_for(@user) do |f| %>
     <%= f.error_notification %>
