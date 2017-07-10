@@ -1,0 +1,77 @@
+
+<h1>Konferencja Kickstart Polska, Warszawa 19-20 Sierpnia</h1>
+<hr />
+<p>
+  <h3>Chcemy by wstęp na konferencję był <strong>darmowy</strong></h3>
+</p>
+<p>
+  Musimy jednak opłacić:
+</p>
+<ul>
+  <li>
+    wynajęcie sali konferencyjnej na 700 osób
+  </li>
+  <li>
+  wynajęcie sprzętu multimedialnego i nagłośnieniowego potrzebnego do realizacji wykładów
+  </li>
+  <li>
+  opłacenie noclegów dla Torbena
+  </li>
+  <li>
+  noclegi dla 30 - osobowego międzynarodowego teamu towarzyszącego Torbenowi w przyległym do sali konferencyjnej hotelu
+  </li>
+  </ul>
+<p>
+  Chcemy wspólnie zebrać środki na organizację tego wydarzenia tak by każdy miał okazję uczestniczyć.
+ </p>
+<p>
+  Natomiast osoby, które udzielą wsparcia finansowego będą miały pierwszeństwo przy rejestracji
+</p>
+<hr />
+
+<div class="row">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-8">
+        <p class="text-right">
+        <%= progress_bar Donate.percentage, striped: true , label: true, style: 'min-width: 20px'%>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <p class="text-right">
+          Zebraliśmy <strong><%= Donate.all.sum(:amount) %> zł</strong> z potrzebnych <strong>30 000 zł</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <%= link_to t('donate'), new_donate_path, class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-5">
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+
+  </div>
+
+</div>
+<hr />
+
+  <strong>Jeśli uzbierana kwota przewyższy koszta pozostałe fundusze przekażemy na:</strong>
+<ul>
+  <li>
+    tłumaczenie II części filmu The Last Reformation, którego premiera odbędzie się już w pażdzierniku
+  </li>
+  <li>
+    pokrycie kosztu biletów samolotowych dla Torbena oraz wsparcie jego działalności (sam Torben nie pobiera honorarium za prowadzenie konferencji ale chcielibyśmy by nie musiał przylatywać do nas na własny koszt - okażmy polską gościnnośc!)
+  </li>
+</ul>
+</p>
+<hr />
