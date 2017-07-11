@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def self.donors_not_registered
-    Donate.select{ |d| d.users.count == 0 }
+    Donate.select { |d| d.users.count == 0 }
   end
 
   def self.locked_seats
