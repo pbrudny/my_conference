@@ -27,6 +27,7 @@ pl:
           city: 'Miasto'
           phone: 'Telefon'
           fellowship: 'Wspólnota'
+          companions: 'Liczba osób towarzyszących'
           first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
           submit: 'Zapisz'
         edit:

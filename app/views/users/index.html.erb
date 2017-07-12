@@ -9,6 +9,7 @@
       <th><%= t('city') %></th>
       <th><%= t('phone') %></th>
       <th><%= t('fellowship') %></th>
+      <th><%= t('companions') %></th>
       <th><%= t('first_time') %></th>
       <th><%= t('donation') %></th>
       <th colspan="3"></th>
@@ -24,6 +25,7 @@
         <td><%= user.city %></td>
         <td><%= user.phone %></td>
         <td><%= user.fellowship %></td>
+        <td><%= user.companions %></td>
         <td><%= yes_no(user.first_time) %></td>
         <td><%= link_to 'Wpłata', user.donate %></td>
         <td><%= link_to t('show'), user %></td>

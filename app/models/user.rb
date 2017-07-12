@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :companions, numericality: { greater_than_or_equal_to: 0, less_than: 15 }
 
   validate :check_available_seats
   belongs_to :donate, optional: true
