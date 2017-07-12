@@ -34,11 +34,11 @@ ActiveRecord::Schema.define(version: 20170712210641) do
     t.string   "phone"
     t.string   "fellowship"
     t.boolean  "first_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "donate_id"
     t.string   "city"
-    t.integer  "companions"
+    t.integer  "companions", default: 0
   end
 
 end

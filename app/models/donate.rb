@@ -6,14 +6,18 @@ class Donate < ApplicationRecord
   has_many :users
 
   has_secure_token
-  
+
+  def self.donors_not_registered
+    select { |d| d.users.count == 0 }
+  end
+
   def self.percentage
     return 1 if self.total > self.total_cost
     Float(self.total) / self.total_cost
   end
 
   def self.total
-    Donate.all.sum(:amount)
+    all.sum(:amount)
   end
 
   def self.total_cost

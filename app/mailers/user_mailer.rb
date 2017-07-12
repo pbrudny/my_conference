@@ -7,7 +7,10 @@ class UserMailer < ApplicationMailer
   #
   def user_registered(user)
     @greeting = "Hej #{user.first_name}"
-
+    @companions = user.companions > 0
+    if @companions
+      @companions_number = "Liczba osób towarzyszących: #{user.companions}"
+    end
     mail to: user.email, subject: 'Potwierdzenie rejestracji'
   end
 end

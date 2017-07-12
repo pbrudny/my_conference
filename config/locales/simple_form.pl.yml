@@ -35,6 +35,7 @@ pl:
           last_name: 'Nazwisko'
           email: 'E-mail'
           city: 'Miasto'
+          companions: 'Liczba osób towarzyszących'
           phone: 'Telefon'
           fellowship: 'Wspólnota'
           first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
