@@ -38,7 +38,7 @@ pl:
         user:
           attributes:
             companions:
-              less_than: 'Nie można zgłosić więcej niż 6 osób za jednym razem'
+              less_than: 'Nie można zgłosić więcej niż 5 osób za jednym razem'
               not_a_number: 'Podaj liczbę osób towarzyszących'
             first_name:
               blank: 'Podaj imię!'
