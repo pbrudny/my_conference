@@ -20,7 +20,7 @@ class User < ApplicationRecord
    700 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats
   end
 
-  def locked_seats
+  def self.locked_seats
     20
   end
 
