@@ -3,14 +3,14 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><%= t('first_name') %></th>
-      <th><%= t('last_name') %></th>
-      <th><%= t('email') %></th>
-      <th><%= t('city') %></th>
-      <th><%= t('phone') %></th>
-      <th><%= t('fellowship') %></th>
-      <th><%= t('companions') %></th>
-      <th><%= t('first_time') %></th>
+      <th><%= sort_link(@q, :firt_name, t('first_name')) %></th>
+      <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
+      <th><%= sort_link(@q, :email, t('email')) %></th>
+      <th><%= sort_link(@q, :city, t('city')) %></th>
+      <th><%= sort_link(@q, :phone, t('phone')) %></th>
+      <th><%= sort_link(@q, :fellowship, t('fellowship')) %></th>
+      <th><%= sort_link(@q, :companions, t('companions')) %></th>
+      <th><%= sort_link(@q, :first_time, t('first_time')) %></th>
       <th><%= t('donation') %></th>
       <th colspan="3"></th>
     </tr>

@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.order(:created_at).page params[:page]
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).page params[:page]
   end
 
   def show
