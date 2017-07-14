@@ -24,10 +24,6 @@ class User < ApplicationRecord
     50
   end
 
-  def self.locked_seats
-    50
-  end
-
   def self.total_companions
     User.sum(:companions)
   end
