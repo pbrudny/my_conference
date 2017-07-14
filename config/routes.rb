@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :questions do
+    collection { get 'qa' }
+  end
   resources :donates do
     member do
       get 'set_received'

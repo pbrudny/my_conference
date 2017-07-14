@@ -1,8 +1,10 @@
-<div class="col-5 links">
+<div class="col-7 links">
+  <%= link_to 'Home', root_path %>|
   <%= link_to 'Program', static_pages_schedule_path %>|
   <% if User.seats_available? %>
     <%= link_to 'Rejestracja', new_user_path %>|
   <% end %>
   <%= link_to 'Wsparcie', static_pages_support_path %>|
+  <%= link_to 'Pytania', qa_questions_path %>|
   <%= link_to 'Kontakt', static_pages_contact_path %>
 </div>
