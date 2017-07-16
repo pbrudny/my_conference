@@ -18,7 +18,11 @@ class User < ApplicationRecord
   end
 
   def self.total_available
-   700 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats
+   seats_free > 0 ? seats_free : 0
+  end
+
+  def self.seats_free
+    700 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats
   end
 
   def self.locked_seats
