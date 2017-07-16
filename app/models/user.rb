@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def self.locked_seats
-    20
+    14
   end
 
   def self.eventbrite_users
