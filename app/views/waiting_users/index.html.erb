@@ -1,39 +1,40 @@
-<p id="notice"><%= notice %></p>
+<h1>Lista Rezerwowa</h1>
 
-<h1>Waiting Users</h1>
-
-<table>
+<table class="table table-hover">
   <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Fellowship</th>
-      <th>City</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
+    <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
+    <th><%= sort_link(@q, :email, t('email')) %></th>
+    <th><%= sort_link(@q, :city, t('city')) %></th>
+    <th><%= sort_link(@q, :phone, t('phone')) %></th>
+    <th><%= sort_link(@q, :fellowship, t('fellowship')) %></th>
+    <th><%= sort_link(@q, :category_id, t('category')) %></th>
+    <th><%= sort_link(@q, :created_at, t('data')) %></th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @waiting_users.each do |waiting_user| %>
+  <% @waiting_users.each do |user| %>
       <tr>
-        <td><%= waiting_user.first_name %></td>
-        <td><%= waiting_user.last_name %></td>
-        <td><%= waiting_user.email %></td>
-        <td><%= waiting_user.phone %></td>
-        <td><%= waiting_user.fellowship %></td>
-        <td><%= waiting_user.city %></td>
-        <td><%= waiting_user.category %></td>
-        <td><%= link_to 'Show', waiting_user %></td>
-        <td><%= link_to 'Edit', edit_waiting_user_path(waiting_user) %></td>
-        <td><%= link_to 'Destroy', waiting_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.city %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.fellowship %></td>
+        <td><%= user.category.try(:name) %></td>
+        <td><%= user.created_at.strftime('%H:%M %d.%m.%y') %></td>
+        <td><%= link_to t('edit'), edit_waiting_user_path(user) %></td>
+        <td><%= link_to t('destroy'), user, method: :delete, data: { confirm: t('are_you_sure') } %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Waiting User', new_waiting_user_path %>
+<%= paginate @waiting_users %>
+
+<%= link_to t('add_user'), new_waiting_user_path %>

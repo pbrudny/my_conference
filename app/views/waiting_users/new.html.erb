@@ -1,5 +1,5 @@
 <h1>Wpisz uczestnika na listę rezerwową</h1>
-
+<h3> (Poinformujemy Ciebie gdy zwolnią się miejca)</h3>
 <%= simple_form_for(@waiting_user) do |f| %>
     <%= f.error_notification %>
 
@@ -16,4 +16,4 @@
       <%= f.submit t('simple_form.labels.user.new.submit'), class: 'btn btn-primary btn-lg' %>
     </div>
 <% end %>
-<%= link_to 'Back', waiting_users_path %>
+<%= link_to t('back'), waiting_users_path %>

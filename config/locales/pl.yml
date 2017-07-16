@@ -46,6 +46,14 @@ pl:
               blank: 'Podaj nazwisko!'
             email:
               blank: 'Podaj E-mail!'
+        waiting_user:
+          attributes:
+            first_name:
+              blank: 'Podaj imię!'
+            last_name:
+              blank: 'Podaj nazwisko!'
+            email:
+              blank: 'Podaj E-mail!'
         donate:
           attributes:
             amount:

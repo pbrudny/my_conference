@@ -5,7 +5,8 @@ class WaitingUsersController < ApplicationController
   # GET /waiting_users
   # GET /waiting_users.json
   def index
-    @waiting_users = WaitingUser.all
+    @q = WaitingUser.ransack(params[:q])
+    @waiting_users = @q.result(distinct: true).page params[:page]
   end
 
   # GET /waiting_users/1
@@ -29,7 +30,7 @@ class WaitingUsersController < ApplicationController
 
     respond_to do |format|
       if @waiting_user.save
-        format.html { redirect_to static_pages_main_path, notice: 'Zostałeś wpisany na listę rezerwową. Poinformujemy Cię jeśli znajdzie się miejce' }
+        format.html { redirect_to static_pages_main_path, notice: 'Zostałeś wpisany na listę rezerwową. Poinformujemy Cię jeśli zwolni się miejce.' }
         format.json { render :show, status: :created, location: @waiting_user }
       else
         format.html { render :new }
