@@ -12,6 +12,7 @@
       <%= f.input :phone %>
       <%= f.input :fellowship %>
       <%= f.input :first_time %>
+      <%= f.association :category %>
       <%= hidden_field_tag :token, @token %>
     </div>
 

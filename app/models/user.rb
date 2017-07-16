@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   validate :check_available_seats
   belongs_to :donate, optional: true
+  belongs_to :category, optional: true
 
   def self.seats_available?
     User.total_available > 0

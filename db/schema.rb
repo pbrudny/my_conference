@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714115322) do
+ActiveRecord::Schema.define(version: 20170716182347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "donates", force: :cascade do |t|
     t.integer  "amount"
@@ -41,11 +47,12 @@ ActiveRecord::Schema.define(version: 20170714115322) do
     t.string   "phone"
     t.string   "fellowship"
     t.boolean  "first_time"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "donate_id"
     t.string   "city"
-    t.integer  "companions", default: 0
+    t.integer  "companions",  default: 0
+    t.integer  "category_id"
   end
 
 end
