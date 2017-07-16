@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   validates :companions, numericality: { greater_than_or_equal_to: 0, less_than: 6 }
 
-  validate :check_available_seats
+  validate :check_available_seats, on: :create
   belongs_to :donate, optional: true
   belongs_to :category, optional: true
 
