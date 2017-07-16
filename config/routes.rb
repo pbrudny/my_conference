@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :waiting_users
   resources :categories
   resources :questions do
     collection { get 'qa' }

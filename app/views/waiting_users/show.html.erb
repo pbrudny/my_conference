@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @waiting_user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @waiting_user.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @waiting_user.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @waiting_user.phone %>
+</p>
+
+<p>
+  <strong>Fellowship:</strong>
+  <%= @waiting_user.fellowship %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @waiting_user.city %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @waiting_user.category %>
+</p>
+
+<%= link_to 'Edit', edit_waiting_user_path(@waiting_user) %> |
+<%= link_to 'Back', waiting_users_path %>

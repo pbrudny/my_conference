@@ -40,6 +40,27 @@ pl:
           fellowship: 'Wspólnota'
           first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
           submit: 'Zapisz'
+      waiting_user:
+        new:
+          first_name: 'Imię'
+          last_name: 'Nazwisko'
+          email: 'E-mail'
+          city: 'Miasto'
+          phone: 'Telefon'
+          fellowship: 'Wspólnota'
+          companions: 'Liczba osób towarzyszących'
+          first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
+          submit: 'Zapisz'
+        edit:
+          first_name: 'Imię'
+          last_name: 'Nazwisko'
+          email: 'E-mail'
+          city: 'Miasto'
+          companions: 'Liczba osób towarzyszących'
+          phone: 'Telefon'
+          fellowship: 'Wspólnota'
+          first_time: 'Pierwszy raz na konferencji chrześcijańskiej?'
+          submit: 'Zapisz'
       donate:
         new:
           first_name: 'Imię'

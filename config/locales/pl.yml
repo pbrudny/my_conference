@@ -55,7 +55,10 @@ pl:
               blank: 'Podaj E-mail!'
   last_name: "nazwisko"
   first_name: "Imię"
+  phone: "Telefon"
   email: "E-mail"
+  fellowship: "Wspólnota"
+  city: "Miasto"
   show: "Pokaż"
   edit: "Edytuj"
   are_you_sure: "Czy na pewno chcesz usunąć?"
