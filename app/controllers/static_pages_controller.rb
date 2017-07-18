@@ -17,4 +17,8 @@ class StaticPagesController < ApplicationController
 
   def faq
   end
+
+  def admin
+
+  end
 end

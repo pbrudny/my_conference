@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(qa)
+  http_auth %w(qa)
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   def qa

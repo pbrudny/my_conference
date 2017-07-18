@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Pytanie:</strong>
   <%= @question.body %>
 </p>
 
 <p>
-  <strong>Answer:</strong>
-  <%= @question.answer %>
+  <strong>Odpowiedź:</strong>
+  <%= @question.answer.html_safe %>
 </p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', questions_path %>
+<%= link_to t('edit'), edit_question_path(@question) %> |
+<%= link_to t('back'), questions_path %>

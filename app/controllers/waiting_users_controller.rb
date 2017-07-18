@@ -1,5 +1,5 @@
 class WaitingUsersController < ApplicationController
-  http_basic_authenticate_with name: 'tlr', password: 'mark16', except: %w(new create show)
+  http_auth %w(new create show)
   before_action :set_waiting_user, only: [:show, :edit, :update, :destroy]
 
   # GET /waiting_users
