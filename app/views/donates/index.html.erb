@@ -1,5 +1,15 @@
 <h1>Deklaracje wpłat (<%= Donate.count %>)</h1>
-
+<div class="row">
+  <div class="col-sm-2">
+    Liczba wyszukanych: <%= @donates.count %>
+  </div>
+  <div class="col-sm-6">
+  <%= search_form_for @q do |f| %>   
+      <%= f.search_field :first_name_or_last_name_or_email_cont  %>    
+      <%= f.submit 'Szukaj' %>
+  <% end %>
+  </div>
+</div>
 <table class="table table-hover">
   <thead>
     <tr>

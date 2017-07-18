@@ -1,10 +1,15 @@
 <h1><%= t('registered')%> (<%= User.count + User.total_companions %>)</h1>
-<p>
+<div class="row">
+  <div class="col-sm-3">
+    Liczba wyszukanych wpisów: <%= @users.count %>
+  </div>
+  <div class="col-sm-6">
     <%= search_form_for @q do |f| %>   
-      <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_cont %>    
-      <%= f.submit 'Szukaj' %>
+        <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_or_category_name_cont %>    
+        <%= f.submit 'Szukaj' %>
     <% end %>
-</p>
+  </div>
+</div>
 <table class="table table-hover">
   <thead>
     <tr>
