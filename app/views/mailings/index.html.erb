@@ -1,0 +1,32 @@
+<%= render 'dashboard/admin_navbar' %>
+
+<h1>Mailing</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t('title') %></th>
+      <th>Treść</th>
+      <th><%= t('sent_at') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mailings.each do |mailing| %>
+      <tr>
+        <td><%= mailing.title %></td>
+        <td><%= mailing.body %></td>
+        <td><%= mailing.sent_at.try(:strftime,'%H:%M %d.%m.%y') %></td>
+        <td><%= link_to t('show'), mailing %></td>
+        <td><%= link_to t('edit'), edit_mailing_path(mailing) %></td>
+        <td><%= link_to t('destroy'), mailing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('sent_to_all'), send_to_all_mailing_path(mailing), data: { confirm: 'Na pewno chcesz wysłać do wszystkich uczestników?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nowy mailing', new_mailing_path %>

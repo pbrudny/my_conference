@@ -1,0 +1,18 @@
+<h3>
+  <%= @mailing.title %>
+</h3>
+<hr />
+<p>
+  Witaj...
+</p>
+<p>
+  <%= @mailing.body.html_safe %>
+</p>
+<%= render partial: 'layouts/mailer_footer' %>
+
+<hr />
+<p>
+  Wysłano <strong><%= @mailing.sent_at.try(:strftime,'%H:%M %d.%m.%y') %></strong> do <strong><%= @mailing.mailing_users.count %></strong> osób
+</p>
+<%= link_to t('edit'), edit_mailing_path(@mailing) %> |
+<%= link_to t('back'), mailings_path %>

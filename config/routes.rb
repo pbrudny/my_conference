@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :mailings do
+    member { get 'send_to_all' }
+  end
   resources :stats, only: :index
 
   resources :waiting_users

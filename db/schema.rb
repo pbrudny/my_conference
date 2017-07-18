@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716195018) do
+ActiveRecord::Schema.define(version: 20170718150031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,23 @@ ActiveRecord::Schema.define(version: 20170716195018) do
     t.datetime "updated_at", null: false
     t.string   "token"
     t.index ["token"], name: "index_donates_on_token", unique: true, using: :btree
+  end
+
+  create_table "mailing_users", force: :cascade do |t|
+    t.integer  "mailing_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mailing_id"], name: "index_mailing_users_on_mailing_id", using: :btree
+    t.index ["user_id"], name: "index_mailing_users_on_user_id", using: :btree
+  end
+
+  create_table "mailings", force: :cascade do |t|
+    t.string   "title",      null: false
+    t.text     "body",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "sent_at"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -68,5 +85,7 @@ ActiveRecord::Schema.define(version: 20170716195018) do
     t.index ["category_id"], name: "index_waiting_users_on_category_id", using: :btree
   end
 
+  add_foreign_key "mailing_users", "mailings"
+  add_foreign_key "mailing_users", "users"
   add_foreign_key "waiting_users", "categories"
 end

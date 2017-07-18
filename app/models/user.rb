@@ -9,6 +9,8 @@ class User < ApplicationRecord
   belongs_to :donate, optional: true
   belongs_to :category, optional: true
 
+  has_many :mailing_users
+
   def self.seats_available?
     User.total_available > 0
   end

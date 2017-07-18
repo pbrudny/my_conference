@@ -6,11 +6,19 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.created.subject
   #
   def user_registered(user)
-    @greeting = "Hej #{user.first_name}"
+    @greeting = "Witaj #{user.first_name}"
     @companions = user.companions > 0
     if @companions
       @companions_number = "Liczba osób towarzyszących: #{user.companions}"
     end
     mail to: user.email, subject: 'Potwierdzenie rejestracji'
+  end
+
+  def custom(user, mailing)
+    @greeting = "Witaj #{user.first_name}"
+    @title = mailing.title
+    @body = mailing.body
+
+    mail to: user.email, subject: mailing.title
   end
 end

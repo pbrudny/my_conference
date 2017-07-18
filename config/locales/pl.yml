@@ -97,3 +97,5 @@ pl:
   companions: "Inni"
   category: "Typ"
   stats: "Statystyki"
+  title: "Tytuł"
+  body: "Treść"

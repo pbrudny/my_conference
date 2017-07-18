@@ -86,3 +86,7 @@ pl:
       prompts:
         defaults:
           age: 'Select your age'
+  title: "Tytuł"
+  body: "Treść"
+  sent_at: "Wysłano"
+  sent_to_all: "Wyślij do wszystkich"

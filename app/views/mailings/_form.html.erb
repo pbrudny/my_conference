@@ -1,0 +1,23 @@
+<%= simple_form_for(@mailing) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, label: t('title') %>
+    <p>Witaj...</p>
+    <%= f.input :body, as: :text, label: t('body') %>
+  </div>
+
+    <br />
+    <p>Pozdrawiamy,</p>
+    <p>
+      Organizatorzy kickstartu (Kasia, Kuba, Piotrek i Aga)
+    </p>
+
+    <p><%= link_to 'http://kickstartpolska.pl', root_url %></p>
+    <hr />
+    <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+
