@@ -22,7 +22,7 @@ class User < ApplicationRecord
   end
 
   def self.seats_free
-    70 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats
+    700 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats
   end
 
   def self.locked_seats
