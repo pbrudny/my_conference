@@ -61,6 +61,13 @@ pl:
               greater_than: 'Kwota musi być większa niż zero'
             email:
               blank: 'Podaj E-mail!'
+        mailing:
+          attributes:
+            title:
+              blank: 'Podaj tytuł'
+            body:
+              blank: 'Wprowadź treść'
+
   last_name: "nazwisko"
   first_name: "Imię"
   phone: "Telefon"
