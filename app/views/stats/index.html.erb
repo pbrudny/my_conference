@@ -1,0 +1,12 @@
+<%= render 'dashboard/admin_navbar' %>
+
+<h3><%= t('city') %></h3>
+<hr />
+<%= pie_chart User.group(:city).count %>
+<%= column_chart User.group(:city).count %>
+<br />
+
+<h3><%= t('fellowship') %></h3>
+<hr />
+<%= pie_chart User.group(:fellowship).count %>
+<%= column_chart User.group(:fellowship).count %>

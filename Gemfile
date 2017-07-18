@@ -37,6 +37,9 @@ gem 'font-awesome-rails'
 gem 'kaminari'
 gem 'ransack'
 gem 'textacular', '~> 5.0'
+gem 'chartkick'
+gem 'groupdate'
+gem 'hightop'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

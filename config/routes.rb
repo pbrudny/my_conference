@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  resources :stats, only: :index
 
   resources :waiting_users
   resources :categories
