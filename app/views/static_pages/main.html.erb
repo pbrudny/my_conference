@@ -17,3 +17,23 @@
       <p>Jeśli zwolnią się miejsca zostaniesz o tym poinformowany. </p>
   </div>
 </div>
+<br />
+<h2>Program</h2>
+<hr />
+<div class="jumbotron">
+  <%= render 'schedule' %>
+</div>
+<br />
+<h2>Pytania</h2>
+<hr />
+<div class="jumbotron">
+
+<% Question.all.each do |question| %>
+  <h4><%= question.body %></h4>
+  <hr />
+  <p>
+    <%= question.answer.html_safe %>
+  </p>
+  <br />
+<% end %>
+</div>
