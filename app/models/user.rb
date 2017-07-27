@@ -2,7 +2,6 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-
   validates :companions, numericality: { greater_than_or_equal_to: 0, less_than: 6 }
 
   validate :check_available_seats, on: :create
@@ -10,6 +9,8 @@ class User < ApplicationRecord
   belongs_to :category, optional: true
 
   has_many :mailing_users
+
+  scope :selected, -> { where(selected: true) }
 
   def self.seats_available?
     User.total_available > 0

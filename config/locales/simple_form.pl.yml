@@ -91,3 +91,5 @@ pl:
   sent_at: "Wysłano"
   sent_to_all: "Wyślij do wszystkich"
   selected: "Zaznaczone"
+  sent_to_selected: "Wyślij do zaznaczonych (%{number})"
+  delete_confirm: "Na pewno chcesz usunąć?"

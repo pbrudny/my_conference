@@ -20,8 +20,9 @@
         <td><%= mailing.sent_at.try(:strftime,'%H:%M %d.%m.%y') %></td>
         <td><%= link_to t('show'), mailing %></td>
         <td><%= link_to t('edit'), edit_mailing_path(mailing) %></td>
-        <td><%= link_to t('destroy'), mailing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to t('sent_to_all'), send_to_all_mailing_path(mailing), data: { confirm: 'Na pewno chcesz wysłać do wszystkich uczestników?' } %></td>
+        <td><%= link_to t('destroy'), mailing, method: :delete, data: { confirm: t('delete_confirm') } %></td>
+        <td><%= link_to t('sent_to_all'), send_to_all_mailing_path(mailing), data: { confirm: 'Na pewno chcesz wysłać do WSZYSTKICH uczestników?' } %></td>
+        <td><%= link_to t('sent_to_selected', number: User.selected.count), send_to_selected_mailing_path(mailing), data: { confirm: 'Na pewno chcesz wysłać TYLKO do zaznaczonych uczestników?' } %></td>
       </tr>
     <% end %>
   </tbody>

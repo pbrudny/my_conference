@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :mailings do
     member { get 'send_to_all' }
+    member { get 'send_to_selected' }
   end
   resources :stats, only: :index
 
