@@ -1,10 +1,19 @@
 class UsersController < ApplicationController
   http_auth %w(new create show)
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :select]
 
   def index
     @q = User.ransack(params[:q])
-    @users = @q.result(distinct: true).page params[:page]
+    @found = @q.result(distinct: true)
+    @users = @found.page params[:page]
+    if params['commit'] == 'Zaznacz wyszukane'
+      @found.each { |u| u.update_attribute(:selected, true) }
+    end
+  end
+
+  def unselect
+    User.all.each { |u| u.update_attribute(:selected, false) }
+    redirect_to users_url
   end
 
   def show
@@ -28,6 +37,11 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def select
+    @user.update_attribute(:selected, !@user.selected)
+    redirect_to users_url
   end
 
   def update

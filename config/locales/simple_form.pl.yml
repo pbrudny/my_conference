@@ -90,3 +90,4 @@ pl:
   body: "Treść"
   sent_at: "Wysłano"
   sent_to_all: "Wyślij do wszystkich"
+  selected: "Zaznaczone"

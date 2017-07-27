@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'static_pages/faq'
 
-  resources :users
+  resources :users do
+    member { put 'select' }
+    collection { get 'unselect' }
+  end
   root 'static_pages#main'
 end

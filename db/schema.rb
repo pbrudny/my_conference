@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718150031) do
+ActiveRecord::Schema.define(version: 20170726192726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20170718150031) do
     t.string   "city"
     t.integer  "companions",  default: 0
     t.integer  "category_id"
+    t.boolean  "selected"
   end
 
   create_table "waiting_users", force: :cascade do |t|

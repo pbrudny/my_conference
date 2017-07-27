@@ -3,18 +3,23 @@
 <h1><%= t('registered')%> (<%= User.count + User.total_companions %>)</h1>
 <div class="row">
   <div class="col-sm-3">
-    Liczba wyszukanych wpisów: <%= @users.count %>
+    Liczba wyszukanych wpisów: <%= @found.count %>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-5">
     <%= search_form_for @q do |f| %>   
         <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_or_category_name_cont %>    
         <%= f.submit 'Szukaj' %>
+        <%= f.submit 'Zaznacz wyszukane' %>
     <% end %>
+  </div>
+  <div class="col-sm-2">
+    <%= link_to 'Odznacz wszystkie', unselect_users_path %>
   </div>
 </div>
 <table class="table table-hover">
   <thead>
     <tr>
+      <th><%= t('selected') %></th>
       <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
       <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
       <th><%= sort_link(@q, :email, t('email')) %></th>
@@ -31,6 +36,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= link_to selected(user.selected), select_user_path(user, page: params[:page], q: params[:q]), method: :put %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
