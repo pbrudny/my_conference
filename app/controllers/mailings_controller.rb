@@ -1,5 +1,5 @@
 class MailingsController < ApplicationController
-  before_action :set_mailing, only: [:show, :edit, :update, :destroy, :send_to_all]
+  before_action :set_mailing, only: [:show, :edit, :update, :destroy, :send_to_all, :send_to_selected]
 
   def index
     @mailings = Mailing.all
