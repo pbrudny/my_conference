@@ -93,3 +93,4 @@ pl:
   selected: "Zaznaczone"
   sent_to_selected: "Wyślij do zaznaczonych (%{number})"
   delete_confirm: "Na pewno chcesz usunąć?"
+  total: "W sumie"

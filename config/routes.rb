@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :team_members do
+    collection { get 'main' }
+  end
+
   resources :mailings do
     member { get 'send_to_all' }
     member { get 'send_to_selected' }

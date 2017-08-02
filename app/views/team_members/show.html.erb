@@ -1,0 +1,37 @@
+<p>
+  <strong>First name:</strong>
+  <%= @team_member.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @team_member.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @team_member.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @team_member.phone %>
+</p>
+
+<p>
+  <strong>Accommodation:</strong>
+  <%= yes_no(@team_member.accommodation) %>
+</p>
+
+<p>
+  <strong>Pts:</strong>
+  <%= yes_no(@team_member.pts) %>
+</p>
+
+<p>
+  <strong>Jesus hotel staff:</strong>
+  <%= yes_no(@team_member.jesus_hotel_staff) %>
+</p>
+
+<%= link_to 'Edit', edit_team_member_path(@team_member) %> |
+<%= link_to 'Back', team_members_path %>
