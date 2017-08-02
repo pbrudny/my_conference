@@ -4,7 +4,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :companions, numericality: { greater_than_or_equal_to: 0, less_than: 6 }
 
-  validate :check_available_seats, on: :create
   belongs_to :donate, optional: true
   belongs_to :category, optional: true
 
@@ -13,7 +12,7 @@ class User < ApplicationRecord
   scope :selected, -> { where(selected: true) }
 
   def self.seats_available?
-    User.total_available > 0
+    false
   end
 
   def check_available_seats

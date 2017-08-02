@@ -1,5 +1,5 @@
 class DonatesController < ApplicationController
-  http_auth %w(new create show)
+  http_auth_except %w(new create show)
   before_action :set_donate, only: [:show, :edit, :update, :destroy, :set_received]
 
   def index

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  http_auth
+  http_auth_except
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories

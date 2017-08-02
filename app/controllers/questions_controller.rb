@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  http_auth %w(qa)
+  http_auth_except %w(qa)
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   def qa
