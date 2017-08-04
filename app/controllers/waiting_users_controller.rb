@@ -1,30 +1,22 @@
 class WaitingUsersController < ApplicationController
   http_auth_except %w(new create show)
-  before_action :set_waiting_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_waiting_user, only: [:show, :edit, :update, :destroy, :accept]
 
-  # GET /waiting_users
-  # GET /waiting_users.json
   def index
     @q = WaitingUser.ransack(params[:q])
     @waiting_users = @q.result(distinct: true).page params[:page]
   end
 
-  # GET /waiting_users/1
-  # GET /waiting_users/1.json
   def show
   end
 
-  # GET /waiting_users/new
   def new
     @waiting_user = WaitingUser.new
   end
 
-  # GET /waiting_users/1/edit
   def edit
   end
 
-  # POST /waiting_users
-  # POST /waiting_users.json
   def create
     @waiting_user = WaitingUser.new(waiting_user_params)
 
@@ -39,8 +31,6 @@ class WaitingUsersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /waiting_users/1
-  # PATCH/PUT /waiting_users/1.json
   def update
     respond_to do |format|
       if @waiting_user.update(waiting_user_params)
@@ -53,14 +43,17 @@ class WaitingUsersController < ApplicationController
     end
   end
 
-  # DELETE /waiting_users/1
-  # DELETE /waiting_users/1.json
   def destroy
     @waiting_user.destroy
     respond_to do |format|
       format.html { redirect_to waiting_users_url, notice: 'Waiting user was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def accept
+    @waiting_user.accept
+    redirect_to waiting_users_path, notice: I18n.t('user_accepted')
   end
 
   private

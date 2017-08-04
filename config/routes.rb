@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   end
   resources :stats, only: :index
 
-  resources :waiting_users
+  resources :waiting_users do
+    member { get 'accepted' }
+  end
+
   resources :categories
   resources :questions do
     collection { get 'qa' }

@@ -8,6 +8,7 @@
   <tr><td>Deklaracje wpłat bez rejestracji</td><td> <%= Donate.donors_not_registered.count %></td></tr>
   <tr><td>Lista rezerwowa</td><td> <%= WaitingUser.count %></td></tr>
   <tr><td>Członkowie team'u</td><td> <%= TeamMember.count %></td></tr>
+  <tr><td>Zarejestrowani przez Eventbrite</td><td> <%= User.eventbrite_users %></td></tr>
   </tbody>
 </table>
 
