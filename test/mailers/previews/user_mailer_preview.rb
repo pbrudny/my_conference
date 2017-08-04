@@ -6,6 +6,10 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.user_registered(User.first)
   end
 
+  def user_accepted
+    UserMailer.user_accepted(User.first)
+  end
+
   def custom
     UserMailer.custom(User.first, Mailing.last)
   end

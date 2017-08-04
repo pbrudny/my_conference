@@ -52,7 +52,7 @@ class WaitingUsersController < ApplicationController
   end
 
   def accept
-    @waiting_user.accept
+    WaitingUsers::Accept.new(@waiting_user).call
     redirect_to waiting_users_path, notice: I18n.t('user_accepted')
   end
 

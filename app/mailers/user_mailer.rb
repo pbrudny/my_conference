@@ -21,4 +21,9 @@ class UserMailer < ApplicationMailer
 
     mail to: user.email, subject: mailing.title
   end
+
+  def user_accepted(user)
+    @greeting = "Witaj #{user.first_name}"
+    mail to: user.email, subject: 'Zwolniło się miejsce!'
+  end
 end

@@ -28,6 +28,7 @@
         <td><%= user.fellowship %></td>
         <td><%= user.category.try(:name) %></td>
         <td><%= user.created_at.strftime('%H:%M %d.%m.%y') %></td>
+        <td><%= link_to t('accept'), accept_waiting_user_path(user), data: { confirm: t('are_you_sure_accept') } %></td>
         <td><%= link_to t('edit'), edit_waiting_user_path(user) %></td>
         <td><%= link_to t('destroy'), user, method: :delete, data: { confirm: t('are_you_sure') } %></td>
       </tr>

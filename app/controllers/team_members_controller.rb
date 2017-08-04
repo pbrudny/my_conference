@@ -1,7 +1,6 @@
 class TeamMembersController < ApplicationController
   http_auth_except %w(main new create show)
 
-  before_action :set_default_locale
   before_action :set_team_member, only: [:show, :edit, :update, :destroy]
 
   def main

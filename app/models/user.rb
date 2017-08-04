@@ -42,4 +42,8 @@ class User < ApplicationRecord
   def self.total_companions
     User.sum(:companions)
   end
+
+  def self.people_count
+    User.count + User.total_companions + User.eventbrite_users + TeamMember.count
+  end
 end

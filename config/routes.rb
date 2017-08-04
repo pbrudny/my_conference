@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :stats, only: :index
 
   resources :waiting_users do
-    member { get 'accepted' }
+    member { get 'accept' }
   end
 
   resources :categories
