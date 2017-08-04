@@ -5,6 +5,7 @@
 <table class="table table-hover">
   <thead>
   <tr>
+    <th><%= sort_link(@q, :id, t('id')) %></th>
     <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
     <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
     <th><%= sort_link(@q, :email, t('email')) %></th>
@@ -20,6 +21,7 @@
   <tbody>
   <% @waiting_users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
