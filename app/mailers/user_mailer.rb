@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.created.subject
   #
   def user_registered(user)
-    @greeting = "Witaj #{user.first_name}"
+    @greeting = "Cześć #{user.first_name}"
     @companions = user.companions > 0
     if @companions
       @companions_number = "Liczba osób towarzyszących: #{user.companions}"
@@ -15,7 +15,7 @@ class UserMailer < ApplicationMailer
   end
 
   def custom(user, mailing)
-    @greeting = "Witaj #{user.first_name}"
+    @greeting = "Cześć #{user.first_name}"
     @title = mailing.title
     @body = mailing.body
 
@@ -23,7 +23,7 @@ class UserMailer < ApplicationMailer
   end
 
   def user_accepted(user)
-    @greeting = "Witaj #{user.first_name}"
+    @greeting = "Cześć #{user.first_name}"
     mail to: user.email, subject: 'Zwolniło się miejsce!'
   end
 end
