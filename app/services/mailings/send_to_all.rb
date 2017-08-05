@@ -5,10 +5,8 @@ module Mailings
     end
 
     def call
-      User.all.each do |user|
-        if UserMailer.custom(user, mailing).deliver_now
-          user.mailing_users.create(mailing: mailing)
-        end
+      User.order(:id).each do |user|
+        UserMailer.custom(user, mailing).deliver_now if user.mailing_users.create(mailing: mailing)
       end
       mailing.update_attribute(:sent_at, Time.now)
     end

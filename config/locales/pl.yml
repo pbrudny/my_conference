@@ -34,6 +34,8 @@ pl:
     destroyed: "Usunięto użytkownika"
   activerecord:
     errors:
+      messages:
+        record_invalid: 'Nie można dwukrotnie wysłać maila do tego samego użytkownika'
       models:
         user:
           attributes:
@@ -110,3 +112,4 @@ pl:
   accept: "Akceptuj"
   are_you_sure_accept: "Czy na pewno chcesz zaakceptować uczestnictwo?"
   numer_id: "id"
+  one_mail_per_user: "Użytkownik nie może dostać tego samego maila ponownie"
