@@ -7,7 +7,7 @@ module Mailings
     def call
       User.selected.each do |user|
         User.transaction do
-          user.mailing_users.create(mailing: mailing)
+          user.mailing_users.create!(mailing: mailing)
           UserMailer.custom(user, mailing).deliver_now
         end
       end
