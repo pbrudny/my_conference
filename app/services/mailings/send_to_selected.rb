@@ -1,5 +1,7 @@
 module Mailings
   class SendToSelected
+    attr_accessor :error
+
     def initialize(mailing)
       self.mailing = mailing
     end
@@ -12,6 +14,9 @@ module Mailings
         end
       end
       mailing.update_attribute(:sent_at, Time.now)
+    rescue => e
+      @error = e
+      false
     end
 
     private

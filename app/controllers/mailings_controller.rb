@@ -51,8 +51,13 @@ class MailingsController < ApplicationController
   end
 
   def send_to_selected
-    Mailings::SendToSelected.new(@mailing).call
-    redirect_to mailings_path, notice: 'E-mail został wysłany do wybranych uczestników.'
+    send_to_selected = Mailings::SendToSelected.new(@mailing)
+    if send_to_selected.call
+      redirect_to mailings_path, notice: 'E-mail został wysłany do wybranych uczestników.'
+    else
+      flash[:error] = send_to_selected.error
+      redirect_to mailings_path
+    end
   end
 
   private
