@@ -2,7 +2,6 @@ class TeamMember < ApplicationRecord
   validates :email, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :phone, presence: true
   validates :gender, presence: true
   validate :check_available_accommodation
 
