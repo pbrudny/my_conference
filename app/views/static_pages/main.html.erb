@@ -15,6 +15,7 @@
     <p class="red">Brak miejsc</p>
     <p>Możesz zapisać się na <%= link_to 'listę rezerwową', new_waiting_user_path %>.
       <p>Jeśli zwolnią się miejsca zostaniesz o tym poinformowany. </p>
+      <p>Na liście rezerwowej znajduje się <strong><%= WaitingUser.count %></strong> osób.</p>
   </div>
 </div>
 <br />
