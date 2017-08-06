@@ -1,6 +1,17 @@
 <%= render 'dashboard/admin_navbar' %>
 
 <h1>Lista Rezerwowa (<%=  WaitingUser.count %>)</h1>
+<div class="row">
+  <div class="col-sm-3">
+    Liczba wyszukanych wpisów: <%= @found.count %>
+  </div>
+  <div class="col-sm-5">
+    <%= search_form_for @q do |f| %>   
+        <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_cont %>    
+        <%= f.submit 'Szukaj' %>
+    <% end %>
+  </div>
+</div>
 
 <table class="table table-hover">
   <thead>

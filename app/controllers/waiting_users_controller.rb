@@ -4,7 +4,8 @@ class WaitingUsersController < ApplicationController
 
   def index
     @q = WaitingUser.ransack(params[:q])
-    @waiting_users = @q.result(distinct: true).page params[:page]
+    @found = @q.result(distinct: true)
+    @waiting_users = @found.page params[:page]
   end
 
   def show
