@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.csv { send_data @users.to_csv }
+      format.csv { send_data User.all.to_csv }
     end
   end
 
