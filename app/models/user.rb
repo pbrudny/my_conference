@@ -7,7 +7,7 @@ class User < ApplicationRecord
   belongs_to :donate, optional: true
   belongs_to :category, optional: true
 
-  has_many :mailing_users
+  has_many :mailing_users, dependent: destroy
 
   scope :selected, -> { where(selected: true) }
 
