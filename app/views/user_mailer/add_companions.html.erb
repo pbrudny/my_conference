@@ -1,7 +1,7 @@
 <h1>Zgłoszenie osób towarzyszących - Register others </h1>
 
 <p>
-  <%= @greeting %>
+  <%= @greeting %>!
 </p>
 <p>
   Kickstart już co raz bliżej!
@@ -13,7 +13,7 @@ Zarezerwowałeś miejsce dla siebie i dla <%= @companions_number %> osób.
 </p>
 
 <p>
-  Podaj proszę dane (imię, nazwisko) tych osób.
+  Prosimy o wpisanie osób towarzyszących w poniższym formularzu:
 </p>
 <% else %>
 
@@ -22,17 +22,24 @@ Zarezerwowałeś miejsce dla siebie i dla <%= @companions_number %> osób.
     </p>
 
     <p>
-      Podaj proszę dane (imię, nazwisko) tej osoby.
+      Zapisz tę osobę w poniższym formularzu:
     </p>
 
 <% end %>
 <p>
+  <%= link_to 'formularz zgłoszeniowy', new_user_url %>
+  </p>
+<p>
+W polu E-mail podaj Swojego maila.
+  </p>
+<p>
   Pomoże to nam przy rejestracji.
 </p>
-<br />
 <p>
-  Jeśli jednak, któreś z Was nie może uczestniczyć w Kickstarcie również prosimy o informacje.
+  Osoby niezarejestrowane nie będą wpuszczone na konferencje.
 </p>
+
+<br />
 
 <hr>
 
@@ -46,7 +53,7 @@ Zarezerwowałeś miejsce dla siebie i dla <%= @companions_number %> osób.
     </p>
 
     <p>
-      Please send as their names.
+      Please register them
     </p>
 <% else %>
 
@@ -55,10 +62,19 @@ Zarezerwowałeś miejsce dla siebie i dla <%= @companions_number %> osób.
     </p>
 
     <p>
-      Please send us a name of that person.
+      Please register that person
     </p>
 
 <% end %>
 <p>
+  <%= link_to ' here registration form', new_user_url %>
+  </p>
+<p>
+  Fill E-mail with your email.
+</p>
+<p>
   This would help us with a check-in.
+</p>
+<p>
+  Only registered person can participate on the conference!
 </p>
