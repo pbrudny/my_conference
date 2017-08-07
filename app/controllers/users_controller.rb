@@ -4,7 +4,11 @@ class UsersController < ApplicationController
 
   def index
     @q = User.ransack(params[:q])
-    @found = @q.result(distinct: true)
+    if params[:s]
+      @found = @q.result(distinct: true)
+    else
+      @found = @q.result(distinct: true).order(:id)
+    end
     @users = @found.page params[:page]
     if params['commit'] == 'Zaznacz wyszukane'
       @found.each { |u| u.update_attribute(:selected, true) }
@@ -17,7 +21,7 @@ class UsersController < ApplicationController
 
   def unselect
     User.all.each { |u| u.update_attribute(:selected, false) }
-    redirect_to users_url
+    redirect_to_users_keeping_results
   end
 
   def show
@@ -45,7 +49,7 @@ class UsersController < ApplicationController
 
   def select
     @user.update_attribute(:selected, !@user.selected)
-    redirect_to users_url
+    redirect_to_users_keeping_results
   end
 
   def update
@@ -62,6 +66,16 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def redirect_to_users_keeping_results
+      if params[:q]
+        q_key, q_value = params[:q].split('=')
+        redirect_to users_url(q: {q_key => q_value}, page: params[:page])
+      else
+        redirect_to users_url
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
