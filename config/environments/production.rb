@@ -56,7 +56,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "my_conference_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { :host => 'kickstartpolska.pl' }
+  config.action_mailer.default_url_options = { :host => 'https://arcane-island-35585.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false

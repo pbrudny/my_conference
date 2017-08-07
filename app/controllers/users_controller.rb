@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  http_auth_except :new
+  http_auth_except [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy, :select]
 
   def index
