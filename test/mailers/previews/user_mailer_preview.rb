@@ -13,4 +13,8 @@ class UserMailerPreview < ActionMailer::Preview
   def custom
     UserMailer.custom(User.first, Mailing.last)
   end
+
+  def add_companions
+    UserMailer.add_companions(User.find_by(companions: 2))
+  end
 end

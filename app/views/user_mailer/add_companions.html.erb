@@ -1,0 +1,64 @@
+<h1>Zgłoszenie osób towarzyszących - Register others </h1>
+
+<p>
+  <%= @greeting %>
+</p>
+<p>
+  Kickstart już co raz bliżej!
+</p>
+
+<% if @companions_number > 1 %>
+<p>
+Zarezerwowałeś miejsce dla siebie i dla <%= @companions_number %> osób.
+</p>
+
+<p>
+  Podaj proszę dane (imię, nazwisko) tych osób.
+</p>
+<% else %>
+
+    <p>
+      Zarezerwowałeś miejsce dla siebie i jednej osoby.
+    </p>
+
+    <p>
+      Podaj proszę dane (imię, nazwisko) tej osoby.
+    </p>
+
+<% end %>
+<p>
+  Pomoże to nam przy rejestracji.
+</p>
+<br />
+<p>
+  Jeśli jednak, któreś z Was nie może uczestniczyć w Kickstarcie również prosimy o informacje.
+</p>
+
+<hr>
+
+<p>
+  Kickstart is coming!
+</p>
+
+<% if @companions_number > 1 %>
+    <p>
+      You have registered yourself and <%= @companions_number %> other people.
+    </p>
+
+    <p>
+      Please send as their names.
+    </p>
+<% else %>
+
+    <p>
+      You have registered yourself and one person with you.
+    </p>
+
+    <p>
+      Please send us a name of that person.
+    </p>
+
+<% end %>
+<p>
+  This would help us with a check-in.
+</p>

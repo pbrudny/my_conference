@@ -26,4 +26,13 @@ class UserMailer < ApplicationMailer
     @greeting = "Cześć #{user.first_name}"
     mail to: user.email, subject: 'Zwolniło się miejsce!'
   end
+
+  def add_companions(user)
+    @greeting = "Cześć #{user.first_name}"
+    @companions = user.companions > 0
+    if @companions
+      @companions_number = user.companions
+    end
+    mail to: user.email, subject: 'Prosimy podać pozostałe osoby'
+  end
 end
