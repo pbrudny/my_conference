@@ -5,7 +5,6 @@
   <tr><td>Zarejestrowani</td><td><%= User.count %></td></tr>
   <tr><td>Liczba deklaracji wpłat</td><td> <%= Donate.count %></td></tr>
   <tr><td>Lista rezerwowa</td><td> <%= WaitingUser.count %></td></tr>
-  <tr><td>Zablokowane na 'czarną godzinę'</td><td> <%= User.locked_seats %></td></tr>
   <tr><td>Deklaracje wpłat bez rejestracji</td><td> <%= Donate.donors_not_registered.count %></td></tr>
 
   <tr><td>Zarejestrowani łacznie z osobami towarzyszącymi</td><td><%= User.count + User.total_companions %></td></tr>
