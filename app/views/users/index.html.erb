@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <div class="col-sm-2">
-    <%= link_to 'Odznacz wszystkie', unselect_users_path %>
+    <%= link_to "Odznacz wszystkie (#{User.selected.count})", unselect_users_path %>
   </div>
 </div>
 <table class="table table-hover">
