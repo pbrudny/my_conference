@@ -35,16 +35,12 @@ class User < ApplicationRecord
     WaitingUser.count
   end
 
-  def self.eventbrite_users
-    50
-  end
-
   def self.total_companions
     User.sum(:companions)
   end
 
   def self.people_count
-    User.count + User.total_companions + User.eventbrite_users + TeamMember.count
+    User.count + User.total_companions + TeamMember.count
   end
 
   def self.to_csv
