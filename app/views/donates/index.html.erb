@@ -38,7 +38,11 @@
         <td><%= donate.created_at.strftime('%H:%M %d.%m.%y') %></td>
         <td><%= donate.users.try(:count) %></td>
         <td><%= checked(donate.received) %></td>
-        <td><%= link_to t('set_received'), set_received_donate_path(donate) %></td>
+        <td>
+        <% if !donate.received %>
+              <%= link_to t('set_received'), set_received_donate_path(donate) %>
+        <% end %>
+        </td>
         <td><%= link_to t('edit'), edit_donate_path(donate) %></td>
         <td><%= link_to t('destroy'), donate, method: :delete, data: { confirm: t('are_you_sure') } %></td>
       </tr>

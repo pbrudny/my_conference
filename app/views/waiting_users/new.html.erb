@@ -4,7 +4,7 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.select :days, [[t('both_days_long'), 'all'],
+      <%= f.select :days, [[t('both_days_long'), 'both_days'],
                            [t('only_saturday'), 'saturday'],
                            [t('only_sunday'), 'sunday']
                         ], include_blank: false %>
