@@ -11,6 +11,8 @@ class DonateMailer < ApplicationMailer
     @amount = donate.amount
     @account = Donate.account_number
     @want_to_register = (donate.my_plan == 'want_to_register')
+    @token = donate.token
+    @want_to_register = (donate.my_plan == 'want_to_register')
     mail to: donate.email, subject: 'Wpłata na kickstart', bcc: 'kickstartpolska@gmail.com'
   end
 
