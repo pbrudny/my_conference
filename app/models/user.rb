@@ -31,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def self.locked_seats
-    30
+    50
   end
 
   def self.total_companions
