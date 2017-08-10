@@ -1,4 +1,9 @@
 <p>
+  <strong><%= t('days') %>:</strong>
+  <%= t(@user.days) %>
+</p>
+
+<p>
   <strong><%= t('first_name') %>:</strong>
   <%= @user.first_name %>
 </p>
@@ -11,6 +16,11 @@
 <p>
   <strong><%= t('email') %>:</strong>
   <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t('simple_form.labels.user.new.gender') %>:</strong>
+  <%= @user.gender %>
 </p>
 
 <p>

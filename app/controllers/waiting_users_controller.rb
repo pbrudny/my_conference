@@ -65,6 +65,17 @@ class WaitingUsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def waiting_user_params
-      params.require(:waiting_user).permit(:first_name, :last_name, :email, :phone, :fellowship, :city, :category_id)
+      params.require(:waiting_user)
+          .permit(
+              :first_name,
+              :last_name,
+              :email,
+              :gender,
+              :city,
+              :phone,
+              :fellowship,
+              :days,
+              :category_id
+          )
     end
 end

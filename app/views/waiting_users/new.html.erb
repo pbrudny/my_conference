@@ -1,15 +1,17 @@
 <h1>Wpisz uczestnika na listę rezerwową</h1>
-<h3> (Poinformujemy Ciebie gdy zwolnią się miejca)</h3>
+<h3> (Poinformujemy Cię gdy zwolnią się miejca)</h3>
 <%= simple_form_for(@waiting_user) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
+      <%= f.select :days, User::DAYS_OPTION, include_blank: false %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :email %>
+      <%= f.select :gender, User::GENDER_OPTION %>
+      <%= f.input :city %>
       <%= f.input :phone %>
       <%= f.input :fellowship %>
-      <%= f.input :city %>
     </div>
 
     <div class="form-actions">

@@ -6,9 +6,11 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
+      <%= f.select :days, User::DAYS_OPTION, include_blank: false %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :email %>
+      <%= f.select :gender, User::GENDER_OPTION %>
       <%= f.input :companions %>
       <%= f.input :city %>
       <%= f.input :phone %>

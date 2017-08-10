@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802084522) do
+ActiveRecord::Schema.define(version: 20170810120719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,13 +77,15 @@ ActiveRecord::Schema.define(version: 20170802084522) do
     t.string   "phone"
     t.string   "fellowship"
     t.boolean  "first_time"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.integer  "donate_id"
     t.string   "city"
     t.integer  "companions",  default: 0
     t.integer  "category_id"
     t.boolean  "selected"
+    t.string   "gender"
+    t.string   "days",        default: "both_days"
   end
 
   create_table "waiting_users", force: :cascade do |t|
@@ -94,8 +96,10 @@ ActiveRecord::Schema.define(version: 20170802084522) do
     t.string   "fellowship"
     t.string   "city"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "gender"
+    t.string   "days",        default: "all"
     t.index ["category_id"], name: "index_waiting_users_on_category_id", using: :btree
   end
 

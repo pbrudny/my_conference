@@ -1,5 +1,17 @@
 class User < ApplicationRecord
+  DAYS_OPTION = [
+      [I18n.t('both_days_long'), 'all'],
+      [I18n.t('only_saturday'), 'saturday'],
+      [I18n.t('only_sunday'), 'sunday']
+  ]
+  GENDER_OPTION = [
+      [I18n.t('male'), 'male'],
+      [I18n.t('female'), 'female'],
+  ]
+
+  validates_email_format_of :email, message: I18n.t('wrong_email')
   validates :email, presence: true
+  validates :days, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :companions, numericality: { greater_than_or_equal_to: 0, less_than: 6 }
@@ -12,7 +24,7 @@ class User < ApplicationRecord
   scope :selected, -> { where(selected: true) }
 
   def self.seats_available?
-    false
+    User.total_available > 0
   end
 
   def check_available_seats
@@ -24,15 +36,7 @@ class User < ApplicationRecord
   end
 
   def self.seats_free
-    700 - eventbrite_users - Donate.donors_not_registered.count - User.count - User.total_companions - locked_seats - waiting
-  end
-
-  def self.locked_seats
-    14
-  end
-
-  def self.waiting
-    WaitingUser.count
+    1500 - User.people_count - Donate.donors_not_registered.count
   end
 
   def self.total_companions
