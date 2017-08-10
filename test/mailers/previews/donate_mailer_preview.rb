@@ -7,7 +7,7 @@ class DonateMailerPreview < ActionMailer::Preview
   end
 
   def donation_received
-    DonateMailer.donation_received(Donate.first)
+    DonateMailer.donation_received(Donate.last)
   end
 
   def registration_reminder

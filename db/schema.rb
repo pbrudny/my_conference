@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170810131447) do
+ActiveRecord::Schema.define(version: 20170810153316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(version: 20170810131447) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "received"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "token"
+    t.string   "my_plan",    default: "want_to_register"
     t.index ["token"], name: "index_donates_on_token", unique: true, using: :btree
   end
 

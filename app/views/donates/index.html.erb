@@ -19,6 +19,7 @@
       <th><%= sort_link(@q, :email, t('email')) %></th>
       <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
       <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
+      <th><%= sort_link(@q, :my_plan, t('plan')) %></th>
       <th><%= sort_link(@q, :created_at, t('date')) %></th>
       <th><%= t('registered_numbers') %></th>
       <th><%= sort_link(@q, :received, t('received')) %></th>
@@ -33,6 +34,7 @@
         <td><%= donate.email %></td>
         <td><%= donate.first_name %></td>
         <td><%= donate.last_name %></td>
+        <td><%= donate.my_plan %></td>
         <td><%= donate.created_at.strftime('%H:%M %d.%m.%y') %></td>
         <td><%= donate.users.try(:count) %></td>
         <td><%= checked(donate.received) %></td>

@@ -1,5 +1,8 @@
-<h1>Dziękujemy za wsparcie</h1>
+<h1>Dziękujemy za wsparcie!</h1>
 
-<strong>Miejsca na konferencję już się skończyły. Wpłata nie zapewni Ci wejścia na Kickstart</strong>
+<% if @want_to_register %>
+Jeśli Ty lub ktoś z Twoich bliskich planujecie uczestnictwo w konferencji Kickstart
+<p>to zarejestrujcie się przez <%= link_to 'ten formularz', new_user_url(token: @token) %> </p>
+<% end %>
 
 

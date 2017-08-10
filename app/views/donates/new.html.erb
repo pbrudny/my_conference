@@ -8,8 +8,13 @@
       <%= f.input :last_name %>
       <%= f.input :email %>
       <%= f.input :amount, label: 'Kwota (zł)' %>
+      <%= f.select :my_plan, [
+                                  [t('want_to_register'), 'want_to_register'],
+                                  [t('registered'), 'registered'],
+                                  [t('not_going'), 'not_going'],
+        ] %>
     </div>
-
+<hr />
     <div class="form-actions">
       <%= f.submit t('simple_form.labels.donate.new.submit'), class: 'btn btn-primary btn-lg' %>
     </div>

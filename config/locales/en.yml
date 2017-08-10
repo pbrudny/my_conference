@@ -124,3 +124,7 @@ en:
   days: "Days"
   category: "Kategoria"
   seats_left: "%{seats_left} seats left"
+  want_to_register: "I want to receive registration form"
+  registered: "I am already registered"
+  not_going: "I am not coming to Warsaw"
+

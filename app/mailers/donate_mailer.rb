@@ -16,6 +16,7 @@ class DonateMailer < ApplicationMailer
   def donation_received(donate)
     @name = donate.first_name
     @token = donate.token
+    @want_to_register = (donate.my_plan == 'want_to_register')
     mail to: donate.email, subject: 'Otrzymaliśmy wpłatę'
   end
 
