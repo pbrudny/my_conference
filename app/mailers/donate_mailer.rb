@@ -10,6 +10,7 @@ class DonateMailer < ApplicationMailer
     @above if donate.above_limit?
     @amount = donate.amount
     @account = Donate.account_number
+    @want_to_register = (donate.my_plan == 'want_to_register')
     mail to: donate.email, subject: 'Wpłata na kickstart', bcc: 'kickstartpolska@gmail.com'
   end
 
