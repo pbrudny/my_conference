@@ -126,5 +126,5 @@ pl:
   category: "Kategoria"
   seats_left: "zostało %{seats_left} miejsc"
   want_to_register: "Chcę otrzymać link do rejestracji"
-  registered: "Już się zarejestrowałem"
+  already_registered: "Już się zarejestrowałem"
   not_going: "Nie wybieram się na konferencję"
