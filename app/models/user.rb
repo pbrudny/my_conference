@@ -42,6 +42,14 @@ class User < ApplicationRecord
     User.count + User.total_companions + TeamMember.count
   end
 
+  def self.admin_login
+    ENV['login']
+  end
+
+  def self.admin_password
+    ENV['password']
+  end
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names
