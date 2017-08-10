@@ -1,12 +1,12 @@
 module Mailings
-  class SendToAll
+  class SendToAllWaiting
     def initialize(mailing)
       self.mailing = mailing
     end
 
     def call
-      User.order(:id).each do |user|
-        UserMailer.custom(user, mailing).deliver_now if user.mailing_users.create(mailing: mailing)
+      WaitingUser.order(:id).each do |waiting_user|
+        UserMailer.custom(waiting_user, mailing).deliver_now if waiting_user.mailing_users.create(mailing: mailing)
       end
       mailing.update_attribute(:sent_at, Time.now)
     end

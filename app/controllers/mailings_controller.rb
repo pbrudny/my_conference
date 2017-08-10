@@ -46,7 +46,7 @@ class MailingsController < ApplicationController
   end
 
   def send_to_all
-    Mailings::SendToAll.new(@mailing).call
+    Mailings::SendToAllUsers.new(@mailing).call
     redirect_to mailings_path, notice: 'E-mail został wysłany do wszystkich uczestników.'
   end
 
