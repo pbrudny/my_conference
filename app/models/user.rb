@@ -1,14 +1,4 @@
 class User < ApplicationRecord
-  DAYS_OPTION = [
-      [I18n.t('both_days_long'), 'all'],
-      [I18n.t('only_saturday'), 'saturday'],
-      [I18n.t('only_sunday'), 'sunday']
-  ]
-  GENDER_OPTION = [
-      [I18n.t('male'), 'male'],
-      [I18n.t('female'), 'female'],
-  ]
-
   validates_email_format_of :email, message: I18n.t('wrong_email')
   validates :email, presence: true
   validates :days, presence: true

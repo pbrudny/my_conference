@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   http_auth_except [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy, :select]
+  before_action :set_language
 
   def index
     @q = User.ransack(params[:q])
@@ -81,6 +82,11 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def set_language
+      lang = params[:lang] || session[:lang]
+      I18n.default_locale = session[:lang] = lang if lang
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params
@@ -90,6 +96,7 @@ class UsersController < ApplicationController
               :last_name,
               :email,
               :gender,
+              :country,
               :city,
               :phone,
               :fellowship,

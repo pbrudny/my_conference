@@ -25,6 +25,7 @@ pl:
           last_name: 'Nazwisko'
           email: 'E-mail'
           gender: 'Płeć'
+          country: 'Kraj'
           city: 'Miasto'
           phone: 'Telefon'
           fellowship: 'Wspólnota'
@@ -34,6 +35,7 @@ pl:
         edit:
           first_name: 'Imię'
           last_name: 'Nazwisko'
+          country: 'Kraj'
           email: 'E-mail'
           city: 'Miasto'
           companions: 'Liczba osób towarzyszących'
@@ -46,6 +48,7 @@ pl:
           first_name: 'Imię'
           last_name: 'Nazwisko'
           email: 'E-mail'
+          country: 'Kraj'
           city: 'Miasto'
           phone: 'Telefon'
           fellowship: 'Wspólnota'

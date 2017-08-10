@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170810120719) do
+ActiveRecord::Schema.define(version: 20170810131447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20170810120719) do
     t.boolean  "selected"
     t.string   "gender"
     t.string   "days",        default: "both_days"
+    t.string   "country"
   end
 
   create_table "waiting_users", force: :cascade do |t|

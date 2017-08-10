@@ -58,6 +58,14 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    countries (2.1.2)
+      i18n_data (~> 0.8.0)
+      money (~> 6.9)
+      sixarm_ruby_unaccent (~> 1.1)
+      unicode_utils (~> 1.4)
+    country_select (3.1.0)
+      countries (~> 2.0)
+      sort_alphabetical (~> 1.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -72,6 +80,7 @@ GEM
     hightop (0.2.0)
       activerecord
     i18n (0.8.4)
+    i18n_data (0.8.0)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -104,6 +113,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.2)
+    money (6.9.0)
+      i18n (>= 0.6.4, < 0.9)
     multi_json (1.12.1)
     nio4r (2.0.0)
     nokogiri (1.7.2)
@@ -163,7 +174,10 @@ GEM
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    sixarm_ruby_unaccent (1.1.2)
     slop (3.6.0)
+    sort_alphabetical (1.1.0)
+      unicode_utils (>= 1.2.2)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -188,6 +202,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode_utils (1.4.0)
     validates_email_format_of (1.6.3)
       i18n
     web-console (3.5.0)
@@ -207,6 +222,7 @@ DEPENDENCIES
   bootstrap_progressbar
   chartkick
   coffee-rails (~> 4.2)
+  country_select
   figaro
   font-awesome-rails
   groupdate

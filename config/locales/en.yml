@@ -20,4 +20,107 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  user:
+    created: 'Registered'
+    header:
+      add: "Register one person"
+    back: "Back"
+    mailer:
+      created:
+        title: "Registered"
+      registration_reminder: "Przypominamy o możliwości rejestracji"
+    updated: "Updated"
+    destroyed: "Destroyed"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Nie można dwukrotnie wysłać maila do tego samego użytkownika'
+      models:
+        user:
+          attributes:
+            companions:
+              less_than: 'Nie można zgłosić więcej niż 5 osób za jednym razem'
+              not_a_number: 'Podaj liczbę osób towarzyszących'
+            first_name:
+              blank: 'Fill first name!'
+            last_name:
+              blank: 'Fill last name!'
+            email:
+              blank: 'Fill E-mail!'
+        waiting_user:
+          attributes:
+            first_name:
+              blank: 'Podaj imię!'
+            last_name:
+              blank: 'Podaj nazwisko!'
+            email:
+              blank: 'Podaj E-mail!'
+        donate:
+          attributes:
+            amount:
+              blank: 'Add amount'
+              greater_than: 'Kwota musi być większa niż zero'
+            email:
+              blank: 'Podaj E-mail!'
+        mailing:
+          attributes:
+            title:
+              blank: 'Podaj tytuł'
+            body:
+              blank: 'Wprowadź treść'
+
+  last_name: "Last name"
+  first_name: "First name"
+  phone: "Phone"
+  email: "E-mail"
+  fellowship: "Fellowship"
+  city: "City"
+  show: "Show"
+  edit: "Edit"
+  are_you_sure: "Czy na pewno chcesz usunąć?"
+  destroy: "Usuń"
+  amount: "Kwota"
+  back: "Powrót"
+  received: "Received"
+  donate: "Wesprzyj"
+  date: "Data"
+  wrong_email: "Wrong email"
+  registered_numbers: "Osoby"
+  phone: "Telefon"
+  fellowship: "Wspólnota"
+  first_time: "1szy"
+  donation: "Wsparcie"
+  registered: "Zarejestrowani"
+  add_user: "Dodaj użytkownika"
+  set_received: "Potwierdź otrzymanie"
+  views:
+    pagination:
+      first: "First"
+      last: "Last"
+      next: "Next"
+      previous: "Poprzednia"
+  country: "Kraj"
+  city: "Miasto"
+  hours: "Godziny"
+  additional_notes: "Uwagi"
+  companions: "Inni"
+  category: "Typ"
+  stats: "Statystyki"
+  title: "Tytuł"
+  body: "Treść"
+  user_accepted: "Accepted."
+  accept: "Accept"
+  are_you_sure_accept: "Czy na pewno chcesz zaakceptować uczestnictwo?"
+  numer_id: "id"
+  one_mail_per_user: "Użytkownik nie może dostać tego samego maila ponownie"
+  only_saturday: "Only Saturday"
+  saturday: "Saturday"
+  only_sunday: "Only Sunday"
+  sunday: "Sunday"
+  both_days_long: "Both (Saturday and Sunday)"
+  both_days: "Both"
+  female: "woman"
+  male: "man"
+  days: "Days"
+  category: "Kategoria"
+  seats_left: "%{seats_left} seats left"

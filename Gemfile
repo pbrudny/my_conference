@@ -40,6 +40,7 @@ gem 'textacular', '~> 5.0'
 gem 'chartkick'
 gem 'groupdate'
 gem 'hightop'
+gem 'country_select'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'

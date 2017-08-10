@@ -1,14 +1,21 @@
-<h1><%= t('user.header.add') %> (zostało <%= User.total_available %> miejsc)</h1>
+<h1><%= t('user.header.add') %> (<%= t('seats_left', seats_left: User.total_available) %>)</h1>
 
 <%= simple_form_for(@user) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.select :days, User::DAYS_OPTION, include_blank: false %>
+      <%= f.select :days, [[t('both_days_long'), 'all'],
+                           [t('only_saturday'), 'saturday'],
+                           [t('only_sunday'), 'sunday']
+                        ], include_blank: false %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>
       <%= f.input :email %>
-      <%= f.select :gender, User::GENDER_OPTION %>
+      <%= f.select :gender, [
+                              [t('male'), 'male'],
+                              [t('female'), 'female'],
+                          ] %>
+      <%= f.input :country, priority: ['poland'] %>
       <%= f.input :city %>
       <%= f.input :phone %>
       <%= f.input :fellowship %>
