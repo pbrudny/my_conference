@@ -38,19 +38,6 @@
   <%= @user.fellowship %>
 </p>
 
-<p>
-  <strong><%= t('companions') %>:</strong>
-  <%= @user.companions %>
-</p>
-
-<p>
-  <strong><%= t('first_time') %>:</strong>
-  <%= @user.first_time %>
-</p>
-<p>
-  <strong><%= t('category') %>:</strong>
-  <%= @user.category.try(:name) %>
-</p>
 <p><%= link_to t('add_user'), new_user_path(token: @user&.donate&.token), class: 'btn btn-primary' %></p>
 <p>
     <%= link_to t('edit'), edit_user_path(@user) %> |
