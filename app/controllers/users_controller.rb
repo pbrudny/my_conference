@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  http_auth_except [:new, :create]
+  http_auth_except [:new, :create, :show]
   before_action :set_user, only: [:show, :edit, :update, :destroy, :select]
   before_action :set_language
 
