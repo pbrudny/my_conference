@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_default_locale
-    I18n.default_locale = :pl
+    unless session[:lang]
+      I18n.default_locale = :pl
+    end
   end
 end
