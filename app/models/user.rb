@@ -14,8 +14,7 @@ class User < ApplicationRecord
   scope :selected, -> { where(selected: true) }
 
   def self.seats_available?
-    false
-    # User.total_available > 0
+    User.total_available > 0
   end
 
   def check_available_seats

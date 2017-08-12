@@ -13,7 +13,7 @@ class DonateMailer < ApplicationMailer
     @want_to_register = (donate.my_plan == 'want_to_register')
     @token = donate.token
     @want_to_register = (donate.my_plan == 'want_to_register')
-    mail to: donate.email, subject: 'Wpłata na kickstart', bcc: 'kickstartpolska@gmail.com'
+    mail to: donate.email, subject: 'Wpłata na kickstart'
   end
 
   def donation_received(donate)
