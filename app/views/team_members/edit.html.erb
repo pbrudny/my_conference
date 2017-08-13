@@ -1,6 +1,24 @@
 <h1>Editing Team Member</h1>
 
-<%= render 'form', team_member: @team_member %>
+<%= simple_form_for(@team_member) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :first_name, label: 'first name' %>
+      <%= f.input :last_name, label: 'last name' %>
+      <%= f.input :email %>
+      <%= f.input :phone %>
+      <%= f.input :gender, collection: ['male', 'female'] %>
+      <%= f.input :accommodation, label: 'I need accommodation' %>
+      <%= f.input :room %>
+      <%= f.input :pts, label: 'I have finished PTS' %>
+      <%= f.input :jesus_hotel_staff, label: 'I am in Jesus Hotel staff' %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Show', @team_member %> |
 <%= link_to 'Back', team_members_path %>

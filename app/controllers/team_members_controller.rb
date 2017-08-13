@@ -7,7 +7,8 @@ class TeamMembersController < ApplicationController
   end
 
   def index
-    @team_members = TeamMember.all
+    @q = TeamMember.ransack(params[:q])
+    @team_members = @q.result(distinct: true)
   end
 
   def show
@@ -63,7 +64,7 @@ class TeamMembersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_member_params
       params.require(:team_member)
-          .permit(:first_name, :last_name, :email, :accommodation, :pts, :jesus_hotel_staff, :phone, :gender)
+          .permit(:first_name, :last_name, :email, :accommodation, :pts, :jesus_hotel_staff, :phone, :gender, :room)
     end
 
     def set_default_locale

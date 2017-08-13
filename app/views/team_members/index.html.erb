@@ -5,14 +5,15 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Gender</th>
-      <th>Accommodation on venue</th>
-      <th>Pts</th>
-      <th>Jesus hotel staff</th>
+      <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
+      <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
+      <th><%= sort_link(@q, :email, t('email')) %></th>
+      <th><%= sort_link(@q, :phone, t('phone')) %></th>
+      <th><%= sort_link(@q, :gender, t('gender')) %></th>
+      <th><%= sort_link(@q, :accommodation, t('accomodation')) %></th>
+      <th><%= sort_link(@q, :room, t('room')) %></th>
+      <th><%= sort_link(@q, :pts, t('pts')) %></th>
+      <th><%= sort_link(@q, :jesus_hotel_staff, t('jesus_hotel_staff')) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= team_member.phone %></td>
         <td><%= team_member.gender %></td>
         <td><%= yes_no(team_member.accommodation) %></td>
+        <td><%= team_member.room %></td>
         <td><%= yes_no(team_member.pts) %></td>
         <td><%= yes_no(team_member.jesus_hotel_staff) %></td>
         <td><%= link_to 'Show', team_member %></td>
