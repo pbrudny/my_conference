@@ -1,4 +1,4 @@
-<div class="col-7 links">
+<div class="col-9 links">
   <%= link_to 'Home', root_path %>|
   <%= link_to t('schedule'), static_pages_schedule_path %>|
   <% if User.seats_available? %>
@@ -6,5 +6,6 @@
   <% end %>
   <%= link_to t('support'), static_pages_support_path %>|
   <%= link_to t('questions'), qa_questions_path %>|
-  <%= link_to t('contact'), static_pages_contact_path %>
+  <%= link_to t('contact'), static_pages_contact_path %>||
+  <%= link_to t('registration_english'), new_user_path(lang: 'en') %>
 </div>
