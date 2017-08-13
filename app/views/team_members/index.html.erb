@@ -14,6 +14,7 @@
       <th><%= sort_link(@q, :room, t('room')) %></th>
       <th><%= sort_link(@q, :pts, t('pts')) %></th>
       <th><%= sort_link(@q, :jesus_hotel_staff, t('jesus_hotel_staff')) %></th>
+      <th><%= sort_link(@q, :created_at, t('created_at')) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +31,7 @@
         <td><%= team_member.room %></td>
         <td><%= yes_no(team_member.pts) %></td>
         <td><%= yes_no(team_member.jesus_hotel_staff) %></td>
+        <td><%= team_member.created_at.strftime('%H:%M %d.%m.%y') %></td>
         <td><%= link_to 'Show', team_member %></td>
         <td><%= link_to 'Edit', edit_team_member_path(team_member) %></td>
         <td><%= link_to 'Destroy', team_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
