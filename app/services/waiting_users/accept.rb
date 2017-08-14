@@ -5,16 +5,28 @@ module WaitingUsers
     end
 
     def call
-      WaitingUser.transaction do
-        user = create_user
-        waiting_user.destroy
-        UserMailer.user_accepted(user).deliver_now
-      end
+      accept unless already_registered?
     end
 
     private
 
     attr_accessor :waiting_user
+
+    def accept
+      WaitingUser.transaction do
+        user = create_user
+        waiting_user.destroy
+        UserMailer.user_registered(user).deliver_now
+      end
+    end
+
+    def already_registered?
+      User.find_by(
+        first_name: waiting_user.first_name,
+        last_name: waiting_user.last_name,
+        email: waiting_user.email
+      )
+    end
 
     def create_user
       User.create!(
