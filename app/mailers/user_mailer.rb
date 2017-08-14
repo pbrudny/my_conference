@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
   def user_registered(user)
     @greeting = "Cześć #{user.first_name}"
     @user = user
-    mail to: user.email, subject: 'Potwierdzenie rejestracji'
+    mail to: user.email, subject: 'Potwierdzenie zgłoszenia'
   end
 
   def custom(user, mailing)

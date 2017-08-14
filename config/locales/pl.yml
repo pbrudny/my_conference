@@ -28,7 +28,7 @@ pl:
     back: "Powrót"
     mailer:
       created:
-        title: "Zgłoszenie przyjęte"
+        title: "Potwierdzenie zgłoszenia."
       registration_reminder: "Przypominamy o możliwości rejestracji"
     updated: "Zaktualizowano dane użytkownika"
     destroyed: "Usunięto użytkownika"
