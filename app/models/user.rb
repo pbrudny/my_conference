@@ -33,6 +33,10 @@ class User < ApplicationRecord
     50
   end
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def self.total_companions
     User.sum(:companions)
   end

@@ -137,3 +137,13 @@ en:
   contact: "Contact"
   support: "Support"
   registration_english: ""
+  full_name: "Full name"
+  saturday_19_august: "Saturday - 19th August"
+  sunday_20_august: "Sunday - 20th August"
+  program:
+    registration: "Registration"
+    lunch_baptism: "Lunch break + baptism (outreach optional)"
+    lunch_outreach: "Lunch break + outreach"
+  hey: "Hey %{name}"
+  please_print: "Please print this E-mail and present it to our security staff on the entrance."
+  faster_checkin: "This will improve your check-in and will give you priority in getting in to the hall"
