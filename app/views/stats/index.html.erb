@@ -23,7 +23,7 @@
 <h3><%= t('country') %></h3>
 <table class="table table-hover">
   <tbody>
-  <% User.group(:country).count.each do |k,v| %>
+  <% User.group(:country).order('count_id desc').count(:id).each do |k,v| %>
     <tr><td><%= k %></td><td><%= v %></td></tr>
   <% end %>
   </tbody>
@@ -32,7 +32,7 @@
 <h3><%= t('city') %></h3>
 <table class="table table-hover">
   <tbody>
-  <% User.group(:city).count.each do |k,v| %>
+  <% User.group(:city).order('count_id desc').count(:id).each do |k,v| %>
     <tr><td><%= k %></td><td><%= v %></td></tr>
   <% end %>
   </tbody>
@@ -41,7 +41,7 @@
 <h3><%= t('fellowship') %></h3>
 <table class="table table-hover">
   <tbody>
-  <% User.group(:fellowship).count.each do |k,v| %>
+  <% User.group(:fellowship).order('count_id desc').count(:id).each do |k,v| %>
     <tr><td><%= k %></td><td><%= v %></td></tr>
   <% end %>
   </tbody>
