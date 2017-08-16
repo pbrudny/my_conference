@@ -27,7 +27,7 @@ class User < ApplicationRecord
   end
 
   def self.seats_free
-    3
+    0
   end
 
   def self.locked_seats
