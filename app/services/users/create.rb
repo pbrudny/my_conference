@@ -7,7 +7,7 @@ module Users
 
     def call
       if user.save
-        UserMailer.user_registered(user).deliver_now
+        #UserMailer.user_registered(user).deliver_now
       end
     end
 
