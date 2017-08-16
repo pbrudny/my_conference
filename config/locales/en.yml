@@ -147,3 +147,4 @@ en:
   hey: "Hey %{name}"
   please_print: "Please print this E-mail and present it to our security staff on the entrance."
   faster_checkin: "This will improve your check-in and will give you priority in getting in to the hall"
+  no_more_seats: "No more seats"

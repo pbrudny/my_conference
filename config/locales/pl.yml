@@ -148,3 +148,4 @@ pl:
   hey: "Cześć %{name}"
   please_print: "Jeśli wydrukujesz ten E-mail będziesz mógł szybciej wejść na salę."
   faster_checkin: "Unikniesz stania w kolejce do rejestracji i będziesz mógł zająć dogodne dla siebie miejsce."
+  no_more_seats: "Zabrakło miejsc!"
