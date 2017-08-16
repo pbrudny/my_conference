@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def self.seats_free
-    1500 - 266 - User.people_count - Donate.donors_not_registered.count - locked_seats
+    0
   end
 
   def self.locked_seats
@@ -37,12 +37,24 @@ class User < ApplicationRecord
     "#{first_name} #{last_name}"
   end
 
-  def self.total_companions
-    User.sum(:companions)
+  def self.people_count_saturday
+    TeamMember.count + User.both_days + User.only_saturday
   end
 
-  def self.people_count
-    User.count + User.total_companions + TeamMember.count
+  def self.people_count_sunday
+    TeamMember.count + User.both_days + User.only_sunday
+  end
+
+  def self.both_days
+    User.where(days: 'both_days').count + User.where(days: 'both_days').sum(:companions)
+  end
+
+  def self.only_saturday
+    User.where(days: 'saturday').count + User.where(days: 'saturday').sum(:companions)
+  end
+
+  def self.only_sunday
+    User.where(days: 'sunday').count + User.where(days: 'sunday').sum(:companions)
   end
 
   def self.admin_login

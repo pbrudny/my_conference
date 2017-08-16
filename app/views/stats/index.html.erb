@@ -4,13 +4,11 @@
   <tbody>
   <tr><td>Zarejestrowani</td><td><%= User.count %></td></tr>
   <tr><td>Liczba deklaracji wpłat</td><td> <%= Donate.count %></td></tr>
-  <tr><td>Lista rezerwowa</td><td> <%= WaitingUser.count %></td></tr>
-  <tr><td>Deklaracje wpłat bez rejestracji</td><td> <%= Donate.donors_not_registered.count %></td></tr>
 
-  <tr><td>Zarejestrowani łacznie z osobami towarzyszącymi</td><td><%= User.count + User.total_companions %></td></tr>
   <tr><td>Pierwszy raz</td><td><%= User.where(first_time: true).count %></td></tr>
   <tr><td>Członkowie team'u</td><td> <%= TeamMember.count %></td></tr>
-  <tr><td>W sumie na sali</td><td> <%= User.people_count %></td></tr>
+  <tr><td>W sumie na sali (sobota)</td><td> <%= User.people_count_saturday %></td></tr>
+  <tr><td>W sumie na sali (niedziela)</td><td> <%= User.people_count_sunday %></td></tr>
 
   </tbody>
 </table>

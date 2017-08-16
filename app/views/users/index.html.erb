@@ -1,6 +1,6 @@
 <%= render 'dashboard/admin_navbar' %>
 
-<h1><%= t('registered')%> (<%= User.count + User.total_companions %>)</h1>
+<h1><%= t('registered')%> (<%= User.count %>)</h1>
 <div class="row">
   <div class="col-sm-3">
     Liczba wyszukanych wpisów: <%= @found.count %>
