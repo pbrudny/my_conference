@@ -2,7 +2,7 @@
 <h3><%= t('total') %>:</h3>
 <table class="table table-hover">
   <tbody>
-  <tr><td>Zarejestrowani</td><td><%= User.count %></td></tr>
+  <tr><td>Liczba rejestracji</td><td><%= User.count %></td></tr>
   <tr><td>Liczba deklaracji wpłat</td><td> <%= Donate.count %></td></tr>
 
   <tr><td>Pierwszy raz</td><td><%= User.where(first_time: true).count %></td></tr>
