@@ -19,7 +19,7 @@ class User < ApplicationRecord
   end
 
   def check_available_seats
-    errors.add(:first_name, t('no_more_seats')) unless User.seats_available?
+    errors.add(:first_name, I18n.t('no_more_seats')) unless User.seats_available?
   end
 
   def self.total_available
