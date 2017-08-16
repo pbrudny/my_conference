@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def self.seats_free
-    1500 - User.people_count - Donate.donors_not_registered.count - locked_seats
+    1500 - 260 - User.people_count - Donate.donors_not_registered.count - locked_seats
   end
 
   def self.locked_seats

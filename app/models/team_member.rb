@@ -14,7 +14,7 @@ class TeamMember < ApplicationRecord
   end
 
   def self.accommodation_left
-    28 - TeamMember.where(accommodation: true).count
+    30 - TeamMember.where(accommodation: true).count
   end
 
   def self.rooms_left
