@@ -28,6 +28,15 @@
 <p>
   <%= t('city') %>: <%= @user.city %>
 </p>
+<% if @user.companions > 0 %>
+<p>
+  <%= t('mail.companions') %>: <%= @user.companions %>
+</p>
+<p>
+  <hr />
+ <span> <%= t('write_companions_names')%>: </span>
+</p>
+<% end %>
 
 <hr />
 <p>
