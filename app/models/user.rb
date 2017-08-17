@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :mailing_users, dependent: :destroy
 
   scope :selected, -> { where(selected: true) }
+  scope :not_selected, -> { where(selected: false) }
 
   def self.seats_available?
     true

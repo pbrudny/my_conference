@@ -5,20 +5,23 @@
   <div class="col-sm-3">
     Liczba wyszukanych wpisów: <%= @found.count %>
   </div>
-  <div class="col-sm-5">
+  <div class="col-sm-3">
     <%= search_form_for @q do |f| %>   
         <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_or_category_name_cont %>
         <%= f.submit 'Szukaj' %>
     <% end %>
   </div>
   <div class="col-sm-2">
-    Przybyło <%= User.selected.count%> osób
+    <%= link_to "przybyli (#{User.selected.count})", users_path(q: { selected_eq: true }) %>
+  </div>
+  <div class="col-sm-2">
+  <%= link_to "nie przybyli (#{User.not_selected.count})", users_path(q: { selected_eq: false }) %>
   </div>
 </div>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Przybyli</th>
+      <th>Przybył</th>
       <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
       <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
       <th><%= sort_link(@q, :email, t('email')) %></th>
