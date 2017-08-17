@@ -9,17 +9,16 @@
     <%= search_form_for @q do |f| %>   
         <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_or_category_name_cont %>
         <%= f.submit 'Szukaj' %>
-        <%= f.submit 'Zaznacz wyszukane' %>
     <% end %>
   </div>
   <div class="col-sm-2">
-    <%= link_to "Odznacz wszystkie (#{User.selected.count})", unselect_users_path %>
+    Przybyło <%= User.selected.count%> osób
   </div>
 </div>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><%= t('selected') %></th>
+      <th>Przybyli</th>
       <th><%= sort_link(@q, :first_name, t('first_name')) %></th>
       <th><%= sort_link(@q, :last_name, t('last_name')) %></th>
       <th><%= sort_link(@q, :email, t('email')) %></th>
