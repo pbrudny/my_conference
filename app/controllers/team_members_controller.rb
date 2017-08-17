@@ -9,6 +9,11 @@ class TeamMembersController < ApplicationController
   def index
     @q = TeamMember.ransack(params[:q])
     @team_members = @q.result(distinct: true)
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data TeamMember.all.to_csv }
+    end
   end
 
   def show
