@@ -103,7 +103,8 @@ class UsersController < ApplicationController
               :days,
               :first_time,
               :companions,
-              :category_id
+              :category_id,
+              :baptized
           )
     end
 end
