@@ -152,3 +152,4 @@ pl:
   write_companions_names: "Imiona osób towarzyszących [PROSZĘ WPISAĆ]"
   mail:
     companions: "Osoby towarzyszące"
+  baptized: "Chrzest"

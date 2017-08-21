@@ -12,7 +12,7 @@
     <% end %>
   </div>
   <div class="col-sm-2">
-    <%= link_to "przybyli (#{User.selected.count})", users_path(q: { selected_eq: true }) %>
+    <%= link_to "przybyli (#{User.selected.count + User.selected.sum(:companions)})", users_path(q: { selected_eq: true }) %>
   </div>
   <div class="col-sm-2">
   <%= link_to "nie przybyli (#{User.not_selected.count})", users_path(q: { selected_eq: false }) %>
@@ -29,6 +29,7 @@
       <th><%= sort_link(@q, :city, t('city')) %></th>
       <th><%= sort_link(@q, :phone, t('phone')) %></th>
       <th><%= sort_link(@q, :fellowship, t('fellowship')) %></th>
+      <th><%= sort_link(@q, :fellowship, t('baptized')) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
