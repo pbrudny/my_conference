@@ -9,14 +9,15 @@
     <%= search_form_for @q do |f| %>   
         <%= f.search_field :first_name_or_last_name_or_email_or_city_or_fellowship_or_phone_or_category_name_cont %>
         <%= f.submit 'Szukaj' %>
+        <%= f.submit 'Zaznacz wyszukane' %>
     <% end %>
   </div>
   <div class="col-sm-2">
-    <%= link_to "przybyli (#{User.selected.count + User.selected.sum(:companions)})", users_path(q: { selected_eq: true }) %>
+    <%= link_to "Odznacz wszystkie (#{User.selected.count})", unselect_users_path %>
   </div>
   <div class="col-sm-2">
   <%= link_to "nie przybyli (#{User.not_selected.count})", users_path(q: { selected_eq: false }) %>
-  </div>
+</div>
 </div>
 <table class="table table-hover">
   <thead>
