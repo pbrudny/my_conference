@@ -23,6 +23,11 @@ class DonateMailer < ApplicationMailer
     mail to: donate.email, subject: 'Otrzymaliśmy wpłatę'
   end
 
+  def thank_you(donate)
+    @name = donate.first_name
+    mail to: donate.email, subject: 'Dziękujemy za wsparcie konferencji!'
+  end
+
   def registration_reminder(donate)
     @greeting = "Hej #{donate.first_name}"
     @token = donate.token

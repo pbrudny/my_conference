@@ -10,6 +10,10 @@ class DonateMailerPreview < ActionMailer::Preview
     DonateMailer.donation_received(Donate.last)
   end
 
+  def thank_you
+    DonateMailer.thank_you(Donate.last)
+  end
+
   def registration_reminder
     DonateMailer.registration_reminder(Donate.last)
   end
