@@ -42,6 +42,15 @@
   <strong><%= t('fellowship') %>:</strong>
   <%= @user.fellowship %>
 </p>
+<p>
+  <strong><%= t('baptized') %>:</strong>
+  <%= @user.baptized %>
+</p>
+
+<p>
+  <strong><%= t('note') %>:</strong>
+  <%= @user.note %>
+</p>
 
 <p><%= link_to t('add_user'), new_user_path(token: @user&.donate&.token), class: 'btn btn-primary' %></p>
 <p>

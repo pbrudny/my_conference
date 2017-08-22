@@ -104,7 +104,8 @@ class UsersController < ApplicationController
               :first_time,
               :companions,
               :category_id,
-              :baptized
+              :baptized,
+              :note
           )
     end
 end

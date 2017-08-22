@@ -30,6 +30,7 @@
       <th><%= sort_link(@q, :phone, t('phone')) %></th>
       <th><%= sort_link(@q, :fellowship, t('fellowship')) %></th>
       <th><%= sort_link(@q, :baptized, t('baptized')) %></th>
+      <th><%= sort_link(@q, :note, t('note')) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -46,6 +47,7 @@
         <td><%= user.phone %></td>
         <td><%= user.fellowship %></td>
         <td><%= user.baptized %></td>
+        <td><%= user.note %></td>
         <td><%= link_to t('edit'), edit_user_path(user) %></td>
         <td><%= link_to t('destroy'), user, method: :delete, data: { confirm: t('are_you_sure') } %></td>
       </tr>
