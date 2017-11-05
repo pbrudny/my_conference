@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @story.location %>
+</p>
+
+<p>
+  <strong>Url 1:</strong>
+  <%= @story.url_1 %>
+</p>
+
+<p>
+  <strong>Url 2:</strong>
+  <%= @story.url_2 %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @story.course %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @story.summary %>
+</p>
+
+<p>
+  <strong>Summary url:</strong>
+  <%= @story.summary_url %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

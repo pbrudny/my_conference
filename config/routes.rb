@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stories
   resources :testimonies
   resources :team_members do
     collection { get 'main' }
